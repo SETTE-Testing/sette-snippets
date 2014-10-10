@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================
+     30 Jan 2014 18:21:22
+     
+     sette-snippets-external    
+     External library used by sette-snippets.
+     
+     Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>
+     ====================================================================== -->
+<project name="sette-snippets-external" default="build-jar">
+	<description>
+	    External library used by sette-snippets.
+    </description>
+
+	<property name="jar.filename" value="${ant.project.name}.jar" />
+	<property name="jar.target" value="dist/${jar.filename}" />
+	<property name="jar.copyto" value="../sette-snippets/snippet-libs" />
+
+	<!-- ================================= 
+          target: build-jar              
+         ================================= -->
+	<target name="build-jar">
+		<mkdir dir="dist" />
+		<jar destfile="${jar.target}" basedir="bin" />
+		<copy file="${jar.target}" todir="${jar.copyto}" />
+	</target>
+
+	<!-- ================================= 
+          target: clean-jar              
+         ================================= -->
+	<target name="clean-jar">
+		<delete file="${jar.copyto}/${jar.filename}" />
+		<delete dir="dist" />
+	</target>
+</project>
