@@ -1,22 +1,22 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
- * 
+ *
  * SETTE is a tool to help the evaluation and comparison of symbolic execution
  * based test input generator tools.
- * 
+ *
  * Budapest University of Technology and Economics (BME)
- * 
+ *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
  * <micskeiz@mit.bme.hu>
- * 
+ *
  * Copyright 2014
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -29,7 +29,9 @@ import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B2_conditionals.B2d_Nonlinear_Inputs;
 
-@SetteSnippetContainer(category = "B2", goal = "Check constraint solving for nonlinear expressions", inputFactoryContainer = B2d_Nonlinear_Inputs.class)
+@SetteSnippetContainer(category = "B2",
+        goal = "Check constraint solving for nonlinear expressions",
+        inputFactoryContainer = B2d_Nonlinear_Inputs.class)
 public final class B2d_Nonlinear {
     private B2d_Nonlinear() {
         throw new UnsupportedOperationException("Static class");
@@ -38,7 +40,7 @@ public final class B2d_Nonlinear {
     /**
      * Equation: x²+3x-10 = 0<br/>
      * Solution: {x1, x2} = {-5, 2}
-     * 
+     *
      * @param x1
      * @param x2
      * @return
@@ -58,7 +60,7 @@ public final class B2d_Nonlinear {
     /**
      * Equation: 2x²+3x-10 = 0<br/>
      * Solution: {x1, x2} = {-3.108495, 1.608495} (not integer)
-     * 
+     *
      * @param x1
      * @param x2
      * @return
@@ -80,7 +82,7 @@ public final class B2d_Nonlinear {
      * Solution: {x1, x2} = {-3.108495, 1.608495}<br/>
      * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
      * they may not be supported)
-     * 
+     *
      * @param x1
      * @param x2
      * @return
@@ -103,7 +105,7 @@ public final class B2d_Nonlinear {
      * Solution: {x1, x2} = {-0.75-2.1065i, -0.75+2.1065i} (not real)<br/>
      * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
      * they may not be supported)
-     * 
+     *
      * @param x1
      * @param x2
      * @return
@@ -126,7 +128,7 @@ public final class B2d_Nonlinear {
      * Solution: {x1, x2} = {-3.108495, 1.608495}<br/>
      * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
      * they may not be supported)
-     * 
+     *
      * @param x1
      * @param x2
      * @return
@@ -149,7 +151,7 @@ public final class B2d_Nonlinear {
      * Solution: {x1, x2} = {-0.75-2.1065i, -0.75+2.1065i} (not real)<br/>
      * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
      * they may not be supported)
-     * 
+     *
      * @param x1
      * @param x2
      * @return

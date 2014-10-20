@@ -1,22 +1,22 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
- * 
+ *
  * SETTE is a tool to help the evaluation and comparison of symbolic execution
  * based test input generator tools.
- * 
+ *
  * Budapest University of Technology and Economics (BME)
- * 
+ *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
  * <micskeiz@mit.bme.hu>
- * 
+ *
  * Copyright 2014
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -29,7 +29,9 @@ import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B3_loops.B3a_While_Inputs;
 
-@SetteSnippetContainer(category = "B3", goal = "Check support for the while looping statement", inputFactoryContainer = B3a_While_Inputs.class)
+@SetteSnippetContainer(category = "B3",
+        goal = "Check support for the while looping statement",
+        inputFactoryContainer = B3a_While_Inputs.class)
 public final class B3a_While {
     private B3a_While() {
         throw new UnsupportedOperationException("Static class");
@@ -37,7 +39,7 @@ public final class B3a_While {
 
     /**
      * Calculates the sum of numbers from 1 to min(10, x)
-     * 
+     *
      * @param x
      * @return
      */
@@ -56,7 +58,7 @@ public final class B3a_While {
 
     /**
      * Calculates the sum of even numbers from 1 to min(10, x)
-     * 
+     *
      * @param x
      * @return
      */
@@ -78,7 +80,7 @@ public final class B3a_While {
 
     /**
      * Calculates the sum of even numbers from 1 to x
-     * 
+     *
      * @param x
      * @return
      */
@@ -100,7 +102,7 @@ public final class B3a_While {
 
     /**
      * Calculates the sum of even numbers from 1 to min(100, x)
-     * 
+     *
      * @param x
      * @return
      */
@@ -129,7 +131,7 @@ public final class B3a_While {
     /**
      * Calculates the sum of even numbers from 1 to min(limit, x), excluding
      * skip
-     * 
+     *
      * @param x
      * @param limit
      *            When this number is reached the loop breaks
@@ -173,7 +175,7 @@ public final class B3a_While {
      * See {@link https
      * ://www.securecoding.cert.org/confluence/display/java/MSC01
      * -J.+Do+not+use+an+empty+infinite+loop}.
-     * 
+     *
      * @param x
      * @return
      */
@@ -186,7 +188,7 @@ public final class B3a_While {
     /**
      * Please note that it is highly unlikely that the infinite loop will be
      * removed by the compiler or JIT.
-     * 
+     *
      * @param x
      * @return
      */
@@ -249,7 +251,7 @@ public final class B3a_While {
 
                     j++;
                 }
-                i++;
+            i++;
             }
         }
 

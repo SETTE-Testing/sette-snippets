@@ -1,22 +1,22 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
- * 
+ *
  * SETTE is a tool to help the evaluation and comparison of symbolic execution
  * based test input generator tools.
- * 
+ *
  * Budapest University of Technology and Economics (BME)
- * 
+ *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
  * <micskeiz@mit.bme.hu>
- * 
+ *
  * Copyright 2014
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -31,7 +31,9 @@ import hu.bme.mit.sette.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._1_basic.B6_exceptions.dependencies.MyException;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B6_exceptions.B6a_CheckedExceptions_Inputs;
 
-@SetteSnippetContainer(category = "B6", goal = "Check support for checked exceptions", inputFactoryContainer = B6a_CheckedExceptions_Inputs.class)
+@SetteSnippetContainer(category = "B6",
+        goal = "Check support for checked exceptions",
+        inputFactoryContainer = B6a_CheckedExceptions_Inputs.class)
 public final class B6a_CheckedExceptions {
     private B6a_CheckedExceptions() {
         throw new UnsupportedOperationException("Static class");
@@ -74,13 +76,15 @@ public final class B6a_CheckedExceptions {
         }
     }
 
-    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class }, methods = { "calledFunction(int, int)" })
+    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class },
+            methods = { "calledFunction(int, int)" })
     @SetteRequiredStatementCoverage(value = 100)
     public static int call(int x, int y) throws Exception {
         return calledFunction(x, y);
     }
 
-    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class }, methods = { "recursive_(int, int)" })
+    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class },
+            methods = { "recursive_(int, int)" })
     @SetteRequiredStatementCoverage(value = 100)
     public static int recursive(int x) throws Exception {
         return recursive_(x, 1);
@@ -98,7 +102,8 @@ public final class B6a_CheckedExceptions {
         }
     }
 
-    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class }, methods = { "calledFunction(int, int)" })
+    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class },
+            methods = { "calledFunction(int, int)" })
     @SetteRequiredStatementCoverage(value = 100)
     public static int tryCatch(int x, int y) throws MyException {
         try {
@@ -108,7 +113,8 @@ public final class B6a_CheckedExceptions {
         }
     }
 
-    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class }, methods = { "calledFunction(int, int)" })
+    @SetteIncludeCoverage(classes = { B6a_CheckedExceptions.class },
+            methods = { "calledFunction(int, int)" })
     @SetteRequiredStatementCoverage(value = 100)
     public static int tryCatchFinally(int x, int y, int z)
             throws MyException {

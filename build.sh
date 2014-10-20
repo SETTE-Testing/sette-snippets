@@ -6,4 +6,4 @@ CWD="$(
   pwd -P 
 )"
 
-ant -f "$CWD/sette-snippets-external/build.xml"
+ant -f "$CWD/sette-snippets/build.xml"

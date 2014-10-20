@@ -1,22 +1,22 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
- * 
+ *
  * SETTE is a tool to help the evaluation and comparison of symbolic execution
  * based test input generator tools.
- * 
+ *
  * Budapest University of Technology and Economics (BME)
- * 
+ *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
  * <micskeiz@mit.bme.hu>
- * 
+ *
  * Copyright 2014
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -29,7 +29,9 @@ import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B2_conditionals.B2d_Linear_Inputs;
 
-@SetteSnippetContainer(category = "B2", goal = "Check constraint solving for linear expressions", inputFactoryContainer = B2d_Linear_Inputs.class)
+@SetteSnippetContainer(category = "B2",
+        goal = "Check constraint solving for linear expressions",
+        inputFactoryContainer = B2d_Linear_Inputs.class)
 public final class B2d_Linear {
     private B2d_Linear() {
         throw new UnsupportedOperationException("Static class");
@@ -38,7 +40,7 @@ public final class B2d_Linear {
     /**
      * Equation: 20x+2 = 42<br/>
      * Solution: x = 2
-     * 
+     *
      * @param x
      * @return
      */
@@ -54,7 +56,7 @@ public final class B2d_Linear {
     /**
      * Equation: 20x+2 = 41<br/>
      * Solution: x = 1.95 (not integer)
-     * 
+     *
      * @param x
      * @return
      */
@@ -74,7 +76,7 @@ public final class B2d_Linear {
      * 3x+4y = 11<br/>
      * <br/>
      * Solution: {x, y} = {5, -1}
-     * 
+     *
      * @param x
      * @param y
      * @return
@@ -98,7 +100,7 @@ public final class B2d_Linear {
      * 3x+4y = 10<br/>
      * <br/>
      * Solution: {x, y} = {4, -0.5} (not integer)
-     * 
+     *
      * @param x
      * @param y
      * @return
@@ -123,7 +125,7 @@ public final class B2d_Linear {
      * 5x-y-z = 24<br/>
      * <br/>
      * Solution: {x, y, z} = {5, -1, 2}
-     * 
+     *
      * @param x
      * @param y
      * @param z
@@ -152,7 +154,7 @@ public final class B2d_Linear {
      * Solution: {x, y, z} = {198/41, -30/41, 77/41}<br/>
      * Solution with overflow (32bit integer): {x, y, z} = {-1257063594,
      * 1361818898, 942797701}
-     * 
+     *
      * @param x
      * @param y
      * @param z
@@ -174,7 +176,7 @@ public final class B2d_Linear {
     /**
      * Equation: 20x+2 = 41<br/>
      * Solution: x = 1.95
-     * 
+     *
      * @param x
      * @return
      */
@@ -194,7 +196,7 @@ public final class B2d_Linear {
      * 3x+4y = 10<br/>
      * <br/>
      * Solution: {x, y} = {4, -0.5}
-     * 
+     *
      * @param x
      * @param y
      * @return
@@ -221,7 +223,7 @@ public final class B2d_Linear {
      * Solution: {x, y, z} = {198/41, -30/41, 77/41}<br/>
      * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
      * they may not be supported)
-     * 
+     *
      * @param x
      * @param y
      * @param z
@@ -244,7 +246,7 @@ public final class B2d_Linear {
     /**
      * Equation: 20x+2 = 41<br/>
      * Solution: x = 1.95
-     * 
+     *
      * @param x
      * @return
      */
@@ -264,7 +266,7 @@ public final class B2d_Linear {
      * 3x+4y = 10<br/>
      * <br/>
      * Solution: {x, y} = {4, -0.5}
-     * 
+     *
      * @param x
      * @param y
      * @return
@@ -291,7 +293,7 @@ public final class B2d_Linear {
      * Solution: {x, y, z} = {198/41, -30/41, 77/41} <br/>
      * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
      * they may not be supported)
-     * 
+     *
      * @param x
      * @param y
      * @param z

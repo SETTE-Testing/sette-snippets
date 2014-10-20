@@ -1,4 +1,10 @@
 #
+# Ant
+#
+build/
+dist/
+
+#
 # Java
 #
 

@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ======================================================================
-     30 Jan 2014 18:21:22
-     
-     sette-snippets-external    
-     External library used by sette-snippets.
-     
-     Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>
-     ====================================================================== -->
-<project name="sette-snippets-external" default="build-jar">
+<project name="sette-snippets-external" default="main">
 	<description>
-	    External library used by sette-snippets.
+		With these build file the sette-snippets-external project (dependency of sette-snippets) can be easily compiled and packed into a JAR file.
     </description>
 
-	<property name="jar.filename" value="${ant.project.name}.jar" />
-	<property name="jar.target" value="dist/${jar.filename}" />
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="build" />
+	<property name="dist.dir" location="dist" />
 	<property name="jar.copyto" value="../sette-snippets/snippet-libs" />
 
-	<!-- ================================= 
-          target: build-jar              
-         ================================= -->
-	<target name="build-jar">
-		<mkdir dir="dist" />
-		<jar destfile="${jar.target}" basedir="bin" />
-		<copy file="${jar.target}" todir="${jar.copyto}" />
+	<property name="source" value="1.7" />
+	<property name="target" value="1.7" />
+
+	<!-- target: main  -->
+	<target name="main" depends="compile, jar" />
+
+	<!-- target: clean -->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete file="${jar.copyto}/${ant.project.name}.jar" />
 	</target>
 
-	<!-- ================================= 
-          target: clean-jar              
-         ================================= -->
-	<target name="clean-jar">
-		<delete file="${jar.copyto}/${jar.filename}" />
-		<delete dir="dist" />
+	<!-- target: compile -->
+	<target name="compile" depends="clean">
+		<mkdir dir="${build.dir}" />
+		<javac destdir="${build.dir}" includeantruntime="false" source="${source}" target="${target}">
+			<src path="${src.dir}" />
+		</javac>
+	</target>
+
+	<!-- target: jar -->
+	<target name="jar" depends="compile">
+		<mkdir dir="${dist.dir}" />
+		<jar destfile="${dist.dir}/${ant.project.name}.jar">
+			<fileset dir="${build.dir}" />
+		</jar>
+
+		<copy file="${dist.dir}/${ant.project.name}.jar" todir="${jar.copyto}" />
 	</target>
 </project>
