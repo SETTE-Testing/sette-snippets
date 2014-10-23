@@ -27,7 +27,7 @@ package hu.bme.mit.sette.snippets._3_objects;
 
 import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets._3_objects.dependencies.Abstract;
+import hu.bme.mit.sette.snippets._3_objects.dependencies.MyAbstract;
 import hu.bme.mit.sette.snippets.inputs._3_objects.O3c_Abstract_Inputs;
 
 @SetteSnippetContainer(category = "O3",
@@ -39,7 +39,7 @@ public final class O3c_Abstract {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int guess(Abstract obj, int v) {
+    public static int guess(MyAbstract obj, int v) {
         if (obj == null) {
             return -1;
         }
@@ -54,7 +54,7 @@ public final class O3c_Abstract {
     }
 
     @SetteRequiredStatementCoverage(value = 71)
-    public static int validate(Abstract obj, int v) {
+    public static int validate(MyAbstract obj, int v) {
         if (obj == null) {
             return -1;
         }
@@ -70,7 +70,7 @@ public final class O3c_Abstract {
     }
 
     @SetteRequiredStatementCoverage(value = 71)
-    public static int guessImpossible(Abstract obj, int v) {
+    public static int guessImpossible(MyAbstract obj, int v) {
         if (obj == null) {
             return -1;
         }

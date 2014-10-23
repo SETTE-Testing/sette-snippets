@@ -91,7 +91,9 @@ public final class S4_StructureInStructure {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int guess(SegmentStructure s) {
-        if (s == null) {
+        if (s == null || s.p1 == null || s.p2 == null) {
+            // it cannot be provided that the p1 & p2 fields will be never null
+            // without using getter/setter methods
             return 0;
         }
 

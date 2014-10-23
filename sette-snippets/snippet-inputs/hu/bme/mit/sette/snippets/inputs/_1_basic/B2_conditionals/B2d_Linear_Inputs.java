@@ -86,7 +86,7 @@ public final class B2d_Linear_Inputs {
     public static SnippetInputContainer oneParamFloat() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
-        inputs.addByParameters(1.95f);
+        inputs.addByParameters(0.75f);
         inputs.addByParameters(0);
 
         return inputs;
@@ -113,7 +113,7 @@ public final class B2d_Linear_Inputs {
     public static SnippetInputContainer oneParamDouble() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
-        inputs.addByParameters(1.95);
+        inputs.addByParameters(0.75);
         inputs.addByParameters(0);
 
         return inputs;

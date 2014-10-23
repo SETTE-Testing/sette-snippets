@@ -26,7 +26,7 @@
 package hu.bme.mit.sette.snippets.inputs._3_objects;
 
 import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
-import hu.bme.mit.sette.snippets._3_objects.dependencies.AbstractImpl;
+import hu.bme.mit.sette.snippets._3_objects.dependencies.MyAbstractImpl;
 
 public final class O3c_Abstract_Inputs {
     private O3c_Abstract_Inputs() {
@@ -37,8 +37,8 @@ public final class O3c_Abstract_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(null, 0);
-        inputs.addByParameters(new AbstractImpl(), 10);
-        inputs.addByParameters(new AbstractImpl(), 0);
+        inputs.addByParameters(new MyAbstractImpl(), 10);
+        inputs.addByParameters(new MyAbstractImpl(), 0);
 
         return inputs;
     }
@@ -47,7 +47,7 @@ public final class O3c_Abstract_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(null, 0);
-        inputs.addByParameters(new AbstractImpl(), 0);
+        inputs.addByParameters(new MyAbstractImpl(), 0);
 
         return inputs;
     }
@@ -56,7 +56,7 @@ public final class O3c_Abstract_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(null, 0);
-        inputs.addByParameters(new AbstractImpl(), 0);
+        inputs.addByParameters(new MyAbstractImpl(), 0);
 
         return inputs;
     }

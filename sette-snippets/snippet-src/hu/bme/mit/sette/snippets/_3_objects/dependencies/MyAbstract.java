@@ -23,29 +23,19 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package hu.bme.mit.sette.snippets._2_structures.dependencies;
+package hu.bme.mit.sette.snippets._3_objects.dependencies;
 
 import hu.bme.mit.sette.annotations.SetteDependency;
 
 /**
- * A structure describing a segment. Used by the code snippets in S4.
+ * Half-implementation of the value setter-getter interface. Used by the code
+ * snippets in O3.
  */
 @SetteDependency
-public final class SegmentStructure {
-    // it cannot be provided that these fields will be never null without using
-    // getter/setter methods
-    public CoordinateStructure p1 = new CoordinateStructure();
-    public CoordinateStructure p2 = new CoordinateStructure();
-
-    public SegmentStructure() {
-    }
-
-    public SegmentStructure(SegmentStructure o) {
-        if (o == null) {
-            return;
-        }
-
-        p1 = new CoordinateStructure(o.p1);
-        p2 = new CoordinateStructure(o.p2);
+public abstract class MyAbstract implements MyInterface {
+    @Override
+    public MyAbstract chainedSetValue(int v) {
+        setValue(v);
+        return this;
     }
 }

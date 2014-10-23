@@ -91,8 +91,8 @@ public final class O4_Override {
         obj.addAbs(x3);
 
         if (obj.getResult() < 0) {
-            // impossible
-            throw new RuntimeException();
+            // only with overflow
+            return 1;
         } else {
             return 0;
         }
@@ -113,8 +113,8 @@ public final class O4_Override {
         obj.addAbs(x3);
 
         if (obj.getResult() < 0) {
-            // impossible
-            throw new RuntimeException();
+            // only with overflow
+            return 1;
         } else {
             return 0;
         }

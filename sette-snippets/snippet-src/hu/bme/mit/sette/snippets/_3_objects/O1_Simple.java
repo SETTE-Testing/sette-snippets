@@ -42,7 +42,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int oneOperationParams(int x) {
         SimpleObject obj = new SimpleObject();
         obj.addAbs(x);
@@ -52,7 +52,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int oneOperationWithCheck(SimpleObject obj, int x) {
         if (obj == null) {
             return -1;
@@ -65,7 +65,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int oneOperationNoCheck(SimpleObject obj, int x) {
         obj.addAbs(x);
         return obj.getResult();
@@ -108,7 +108,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int guessResultParams(int x1, int x2, int x3) {
         SimpleObject obj = new SimpleObject();
 
@@ -126,7 +126,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int guessResult(SimpleObject obj, int x1, int x2,
             int x3) {
         if (obj == null) {
@@ -147,7 +147,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 90)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int guessImpossibleResultParams(int x1, int x2, int x3) {
         SimpleObject obj = new SimpleObject();
 
@@ -156,8 +156,8 @@ public final class O1_Simple {
         obj.addAbs(x3);
 
         if (obj.getResult() < 0) {
-            // impossible
-            throw new RuntimeException();
+            // only with overflow
+            return 1;
         } else {
             return 0;
         }
@@ -166,7 +166,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 90)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "addAbs(int)",
-    "getResult()" })
+            "getResult()" })
     public static int guessImpossibleResult(SimpleObject obj, int x1,
             int x2, int x3) {
         if (obj == null) {
@@ -178,8 +178,8 @@ public final class O1_Simple {
         obj.addAbs(x3);
 
         if (obj.getResult() < 0) {
-            // impossible
-            throw new RuntimeException();
+            // only with overflow
+            return 1;
         } else {
             return 0;
         }
@@ -221,7 +221,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 100)
+    @SetteRequiredStatementCoverage(value = 85)
     @SetteIncludeCoverage(classes = { SimpleObject.class },
             methods = { "getOperationCount()" })
     public static int guessImpossibleOperationCountParams(int oc) {
@@ -232,14 +232,14 @@ public final class O1_Simple {
         }
 
         if (obj.getOperationCount() < 0) {
-            // impossible
-            throw new RuntimeException();
+            // only with overflow
+            return 1;
         } else {
             return 0;
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 100)
+    @SetteRequiredStatementCoverage(value = 87)
     @SetteIncludeCoverage(classes = { SimpleObject.class },
             methods = { "getOperationCount()" })
     public static int guessImpossibleOperationCount(SimpleObject obj,
@@ -253,8 +253,8 @@ public final class O1_Simple {
         }
 
         if (obj.getOperationCount() < 0) {
-            // impossible
-            throw new RuntimeException();
+            // only with overflow
+            return 1;
         } else {
             return 0;
         }
@@ -263,7 +263,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "getResult()",
-    "getOperationCount()" })
+            "getOperationCount()" })
     public static int guessResultAndOperationCountParams(int x, int oc) {
         SimpleObject obj = new SimpleObject();
 
@@ -281,7 +281,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "getResult()",
-    "getOperationCount()" })
+            "getOperationCount()" })
     public static int guessResultAndOperationCount(SimpleObject obj,
             int x, int oc) {
         if (obj == null) {
@@ -302,7 +302,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 75)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "getResult()",
-    "getOperationCount()" })
+            "getOperationCount()" })
     public static int guessImpossibleResultAndOperationCountParams(
             int x, int oc) {
         SimpleObject obj = new SimpleObject();
@@ -312,7 +312,7 @@ public final class O1_Simple {
         }
 
         if (obj.getResult() == 10 && obj.getOperationCount() == 4) {
-            // impossible
+            // only with overflow
             return 1;
         } else {
             return 0;
@@ -322,7 +322,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 80)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "getResult()",
-    "getOperationCount()" })
+            "getOperationCount()" })
     public static int guessImpossibleResultAndOperationCount(
             SimpleObject obj, int x, int oc) {
         if (obj == null) {
@@ -334,7 +334,7 @@ public final class O1_Simple {
         }
 
         if (obj.getResult() == 10 && obj.getOperationCount() == 4) {
-            // impossible
+            // only with overflow
             return 1;
         } else {
             return 0;
@@ -344,7 +344,7 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 100)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "getResult()",
-    "getOperationCount()" })
+            "getOperationCount()" })
     public static int guessObject(SimpleObject obj) {
         if (obj == null) {
             return -1;
@@ -360,15 +360,16 @@ public final class O1_Simple {
     @SetteRequiredStatementCoverage(value = 66)
     @SetteIncludeCoverage(classes = { SimpleObject.class,
             SimpleObject.class }, methods = { "getResult()",
-    "getOperationCount()" })
+            "getOperationCount()" })
     public static int guessImpossibleObject(SimpleObject obj) {
         if (obj == null) {
             return -1;
         }
 
         if (obj.getOperationCount() < 0 || obj.getResult() < 0) {
-            // invalid object, cannot be created with method calls
-            throw new RuntimeException();
+            // invalid object, cannot be created with method call, only via
+            // reflection or overflow
+            return 1;
         } else {
             return 0;
         }

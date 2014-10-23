@@ -71,6 +71,7 @@ public final class B2d_Nonlinear {
         int e2 = 2 * x2 * x2 + 3 * x2 - 10;
 
         if (e1 == 0 && e2 == 0 && x1 < x2) {
+            // impossible
             return true;
         } else {
             return false;
@@ -117,6 +118,7 @@ public final class B2d_Nonlinear {
 
         if (-0.001f < e1 && e1 < 0.001f && -0.001f < e2 && e2 < 0.001f
                 && (x1 + 0.001f) < (x2 - 0.001f)) {
+            // impossible
             return true;
         } else {
             return false;
@@ -163,6 +165,7 @@ public final class B2d_Nonlinear {
 
         if (-0.001 < e1 && e1 < 0.001 && -0.001 < e2 && e2 < 0.001
                 && (x1 + 0.001) < (x2 - 0.001)) {
+            // impossible
             return true;
         } else {
             return false;

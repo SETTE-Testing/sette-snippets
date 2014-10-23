@@ -27,7 +27,7 @@ package hu.bme.mit.sette.snippets._3_objects;
 
 import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets._3_objects.dependencies.Interface;
+import hu.bme.mit.sette.snippets._3_objects.dependencies.MyInterface;
 import hu.bme.mit.sette.snippets.inputs._3_objects.O3b_Interface_Inputs;
 
 @SetteSnippetContainer(category = "O3",
@@ -39,7 +39,7 @@ public final class O3b_Interface {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int guess(Interface obj, int v) {
+    public static int guess(MyInterface obj, int v) {
         if (obj == null) {
             return -1;
         }
@@ -54,7 +54,7 @@ public final class O3b_Interface {
     }
 
     @SetteRequiredStatementCoverage(value = 71)
-    public static int validate(Interface obj, int v) {
+    public static int validate(MyInterface obj, int v) {
         if (obj == null) {
             return -1;
         }
@@ -70,7 +70,7 @@ public final class O3b_Interface {
     }
 
     @SetteRequiredStatementCoverage(value = 71)
-    public static int guessImpossible(Interface obj, int v) {
+    public static int guessImpossible(MyInterface obj, int v) {
         if (obj == null) {
             return -1;
         }

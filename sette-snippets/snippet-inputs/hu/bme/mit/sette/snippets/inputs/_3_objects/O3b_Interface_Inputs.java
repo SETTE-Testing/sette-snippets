@@ -26,7 +26,7 @@
 package hu.bme.mit.sette.snippets.inputs._3_objects;
 
 import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
-import hu.bme.mit.sette.snippets._3_objects.dependencies.InterfaceImpl;
+import hu.bme.mit.sette.snippets._3_objects.dependencies.MyInterfaceImpl;
 
 public final class O3b_Interface_Inputs {
     private O3b_Interface_Inputs() {
@@ -37,8 +37,8 @@ public final class O3b_Interface_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(null, 0);
-        inputs.addByParameters(new InterfaceImpl(), 10);
-        inputs.addByParameters(new InterfaceImpl(), 0);
+        inputs.addByParameters(new MyInterfaceImpl(), 10);
+        inputs.addByParameters(new MyInterfaceImpl(), 0);
 
         return inputs;
     }
@@ -47,7 +47,7 @@ public final class O3b_Interface_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(null, 0);
-        inputs.addByParameters(new InterfaceImpl(), 0);
+        inputs.addByParameters(new MyInterfaceImpl(), 0);
 
         return inputs;
     }
@@ -56,7 +56,7 @@ public final class O3b_Interface_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(null, 0);
-        inputs.addByParameters(new InterfaceImpl(), 0);
+        inputs.addByParameters(new MyInterfaceImpl(), 0);
 
         return inputs;
     }

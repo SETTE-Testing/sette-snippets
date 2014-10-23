@@ -54,15 +54,16 @@ public final class B2d_Linear {
     }
 
     /**
-     * Equation: 20x+2 = 41<br/>
-     * Solution: x = 1.95 (not integer)
+     * Equation: 20x+2 = 17<br/>
+     * Solution: x = 0.75 (not integer)
      *
      * @param x
      * @return
      */
     @SetteRequiredStatementCoverage(value = 50)
     public static boolean oneParamIntNoSolution(int x) {
-        if (20 * x + 2 == 41) {
+        if (20 * x + 2 == 17) {
+            // impossible
             return true;
         } else {
             return false;
@@ -83,6 +84,8 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean twoParamsInt(int x, int y) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         int e1 = x + 2 * y;
         int e2 = 3 * x + 4 * y;
 
@@ -107,10 +110,13 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 66)
     public static boolean twoParamsIntNoSolution(int x, int y) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         int e1 = x + 2 * y;
         int e2 = 3 * x + 4 * y;
 
         if (e1 == 3 && e2 == 10) {
+            // impossible
             return true;
         } else {
             return false;
@@ -133,6 +139,8 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean threeParamsInt(int x, int y, int z) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         int e1 = x + 2 * y + 3 * z;
         int e2 = 3 * x + y - 2 * z;
         int e3 = 5 * x - y - z;
@@ -162,11 +170,14 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 71)
     public static boolean threeParamsIntNoSolution(int x, int y, int z) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         int e1 = x + 2 * y + 3 * z;
         int e2 = 3 * x + y - 2 * z;
         int e3 = 5 * x - y - z;
 
         if (e1 == 9 && e2 == 10 && e3 == 23) {
+            // only with overflow
             return true;
         } else {
             return false;
@@ -174,15 +185,17 @@ public final class B2d_Linear {
     }
 
     /**
-     * Equation: 20x+2 = 41<br/>
-     * Solution: x = 1.95
+     * Equation: 20x+2 = 17<br/>
+     * Solution: x = 0.75
+     * 
+     * (0.75 = 3/4 can be precisely represented, see IEEE 754)
      *
      * @param x
      * @return
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean oneParamFloat(float x) {
-        if (20 * x + 2 == 41) {
+        if (20 * x + 2 == 17) {
             return true;
         } else {
             return false;
@@ -196,6 +209,8 @@ public final class B2d_Linear {
      * 3x+4y = 10<br/>
      * <br/>
      * Solution: {x, y} = {4, -0.5}
+     * 
+     * (-0.5 = -1/2 can be precisely represented, see IEEE 754)
      *
      * @param x
      * @param y
@@ -203,6 +218,8 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean twoParamsFloat(float x, float y) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         float e1 = x + 2 * y;
         float e2 = 3 * x + 4 * y;
 
@@ -231,6 +248,8 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean threeParamsFloat(float x, float y, float z) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         float e1 = x + 2 * y + 3 * z;
         float e2 = 3 * x + y - 2 * z;
         float e3 = 5 * x - y - z;
@@ -244,15 +263,17 @@ public final class B2d_Linear {
     }
 
     /**
-     * Equation: 20x+2 = 41<br/>
-     * Solution: x = 1.95
-     *
+     * Equation: 20x+2 = 17<br/>
+     * Solution: x = 0.75
+     * 
+     * (0.75 = 3/4 can be precisely represented, see IEEE 754)
+     * 
      * @param x
      * @return
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean oneParamDouble(double x) {
-        if (20 * x + 2 == 41) {
+        if (20 * x + 2 == 17) {
             return true;
         } else {
             return false;
@@ -266,6 +287,8 @@ public final class B2d_Linear {
      * 3x+4y = 10<br/>
      * <br/>
      * Solution: {x, y} = {4, -0.5}
+     * 
+     * (-0.5 = -1/2 can be precisely represented, see IEEE 754)
      *
      * @param x
      * @param y
@@ -273,6 +296,8 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean twoParamsDouble(double x, double y) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         double e1 = x + 2 * y;
         double e2 = 3 * x + 4 * y;
 
@@ -301,6 +326,8 @@ public final class B2d_Linear {
      */
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean threeParamsDouble(double x, double y, double z) {
+        // it is usual that the results are saved into variables and the
+        // variables are used in conditional statements
         double e1 = x + 2 * y + 3 * z;
         double e2 = 3 * x + y - 2 * z;
         double e3 = 5 * x - y - z;

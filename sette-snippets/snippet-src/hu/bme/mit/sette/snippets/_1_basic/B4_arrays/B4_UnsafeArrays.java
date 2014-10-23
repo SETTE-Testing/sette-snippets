@@ -47,7 +47,7 @@ public final class B4_UnsafeArrays {
     public static int fromParams(int x, int y, int z) {
         int[] numbers = new int[] { x, y, z };
 
-        if (numbers[0] == 1 && numbers[1] == 2 && numbers[3] == 3) {
+        if (numbers[0] == 1 && numbers[1] == 2 && numbers[2] == 3) {
             return 1;
         } else {
             return 0;

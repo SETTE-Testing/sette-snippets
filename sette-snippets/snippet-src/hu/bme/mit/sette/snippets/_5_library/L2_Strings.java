@@ -91,10 +91,10 @@ public final class L2_Strings {
             return -1;
         } else if (b == null) {
             return -2;
-        } else if ((a + b).equals("ab")) {
-            return 1;
         } else if ((a + b).equals("ab") && a.equals("a")) {
             return 2;
+        } else if ((a + b).equals("ab")) {
+            return 1;
         } else if ((a + b).equals("ab") && a.equals("c")) {
             // impossible
             throw new RuntimeException();
