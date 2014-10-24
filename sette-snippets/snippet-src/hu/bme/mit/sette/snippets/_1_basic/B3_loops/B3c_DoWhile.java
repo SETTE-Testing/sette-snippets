@@ -179,7 +179,7 @@ public final class B3c_DoWhile {
      * @param x
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 100)
+    @SetteRequiredStatementCoverage(value = 0)
     public static int infinite(int x) {
         do {
         } while (true);
@@ -192,7 +192,7 @@ public final class B3c_DoWhile {
      * @param x
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 70)
+    @SetteRequiredStatementCoverage(value = 0)
     public static int infiniteNotOptimalizable(int x) {
         int i = 1;
 

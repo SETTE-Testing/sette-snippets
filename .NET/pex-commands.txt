@@ -1,0 +1,23 @@
+0. Get Pex from http://research.microsoft.com/en-us/projects/pex/downloads.aspx
+
+1. pexwizard - create test project and stubs (run in sette-snippets/bin/Debug)
+	
+	pexwizard /NoMoles /ExcludeNamespaceFilter:Dependencies /TestFramework:nunit sette-snippets.dll
+
+2. Optional: move the generated project somewhere else
+
+3. Optional, but highly recommended (resolves a potential problem):
+Resolution of VB Context related problems:
+	put the following line in the end of [generated nunit project]/Properties/PexAssemblyInfo.cs
+
+// Skip Microsoft.VisualBasic from instrumentation (fix VB related Context error messages)
+[assembly: PexInstrumentAssembly("Microsoft.VisualBasic", InstrumentationLevel=PexInstrumentationLevel.Excluded)]
+
+   Rebuild the generated project:
+
+	C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
+	(minor version may be different)
+
+4. pex - run exploration and testgeneration (run in bin/Debug)
+	pex /TimeOut:30 sette-snippets.Tests.dll
+	

@@ -164,7 +164,7 @@ public final class B3b_For {
      * @param x
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 100)
+    @SetteRequiredStatementCoverage(value = 0)
     public static int infinite(int x) {
         for (;;) {
         }
@@ -177,7 +177,7 @@ public final class B3b_For {
      * @param x
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 70)
+    @SetteRequiredStatementCoverage(value = 0)
     public static int infiniteNotOptimalizable(int x) {
         int i = 1;
 

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E55936B-ED16-43C4-8313-8A5A6833FE68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sette_snippets</RootNamespace>
+    <AssemblyName>sette-snippets</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_1_basic\B1_types_and_operators\B1a_PrimitiveTypes.cs" />
+    <Compile Include="_1_basic\B1_types_and_operators\B1b_Constants.cs" />
+    <Compile Include="_1_basic\B1_types_and_operators\B1c_ArithmeticalOperators.cs" />
+    <Compile Include="_1_basic\B1_types_and_operators\B1d_RelationalOperators.cs" />
+    <Compile Include="_1_basic\B1_types_and_operators\B1e_BitwiseOperators.cs" />
+    <Compile Include="_1_basic\B2_conditionals\B2a_IfElse.cs" />
+    <Compile Include="_1_basic\B2_conditionals\B2b_Ternary.cs" />
+    <Compile Include="_1_basic\B2_conditionals\B2c_Switch.cs" />
+    <Compile Include="_1_basic\B2_conditionals\B2d_Linear.cs" />
+    <Compile Include="_1_basic\B2_conditionals\B2d_Nonlinear.cs" />
+    <Compile Include="_1_basic\B3_loops\B3a_While.cs" />
+    <Compile Include="_1_basic\B3_loops\B3b_For.cs" />
+    <Compile Include="_1_basic\B3_loops\B3c_DoWhile.cs" />
+    <Compile Include="_1_basic\B4_arrays\B4_SafeArrays.cs" />
+    <Compile Include="_1_basic\B4_arrays\B4_UnsafeArrays.cs" />
+    <Compile Include="_1_basic\B5_functions\B5a_CallPrivate.cs" />
+    <Compile Include="_1_basic\B5_functions\B5a_CallPublic.cs" />
+    <Compile Include="_1_basic\B5_functions\B5b_LimitedRecursive.cs" />
+    <Compile Include="_1_basic\B5_functions\B5b_UnlimitedRecursive.cs" />
+    <Compile Include="_1_basic\B6_exceptions\B6a_CheckedExceptions.cs" />
+    <Compile Include="_1_basic\B6_exceptions\B6b_UncheckedExceptions.cs" />
+    <Compile Include="_1_basic\B6_exceptions\B6c_CommonRuntimeExceptions.cs" />
+    <Compile Include="_1_basic\B6_exceptions\dependencies\MyException.cs" />
+    <Compile Include="_1_basic\B6_exceptions\dependencies\MyRuntimeException.cs" />
+    <Compile Include="_2_structures\dependencies\CoordinateStructure.cs" />
+    <Compile Include="_2_structures\dependencies\SegmentStructure.cs" />
+    <Compile Include="_2_structures\S1_BasicUsage.cs" />
+    <Compile Include="_2_structures\S2_WithConditionals.cs" />
+    <Compile Include="_2_structures\S3_WithLoops.cs" />
+    <Compile Include="_2_structures\S4_StructureInStructure.cs" />
+    <Compile Include="_3_objects\dependencies\MyAbstract.cs" />
+    <Compile Include="_3_objects\dependencies\MyAbstractImpl.cs" />
+    <Compile Include="_3_objects\dependencies\MyInterface.cs" />
+    <Compile Include="_3_objects\dependencies\MyInterfaceImpl.cs" />
+    <Compile Include="_3_objects\dependencies\SimpleExtendedObject.cs" />
+    <Compile Include="_3_objects\dependencies\SimpleObject.cs" />
+    <Compile Include="_3_objects\dependencies\SimpleObjectDelegate.cs" />
+    <Compile Include="_3_objects\dependencies\SimpleObjectOverride.cs" />
+    <Compile Include="_3_objects\O1_Simple.cs" />
+    <Compile Include="_3_objects\O2_Delegate.cs" />
+    <Compile Include="_3_objects\O3a_Inheritance.cs" />
+    <Compile Include="_3_objects\O3b_Interface.cs" />
+    <Compile Include="_3_objects\O3c_Abstract.cs" />
+    <Compile Include="_3_objects\O4_Override.cs" />
+    <Compile Include="_4_generics\dependencies\GenericTriplet.cs" />
+    <Compile Include="_4_generics\dependencies\IntegerTriplet.cs" />
+    <Compile Include="_4_generics\dependencies\SafeGenericTriplet.cs" />
+    <Compile Include="_4_generics\G1_Functions.cs" />
+    <Compile Include="_4_generics\G2_Objects.cs" />
+    <Compile Include="_5_library\dependencies\DateParser.cs" />
+    <Compile Include="_5_library\dependencies\FingerNumber.cs" />
+    <Compile Include="_5_library\L1_Arithmetics.cs" />
+    <Compile Include="_5_library\L2_Strings.cs" />
+    <Compile Include="_5_library\L2_Strings_Java7.cs" />
+    <Compile Include="_5_library\L3_Wrappers.cs" />
+    <Compile Include="_5_library\L4_Collections.cs" />
+    <Compile Include="_5_library\LO_Other.cs" />
+    <Compile Include="_6_others\AnonymousClass.cs" />
+    <Compile Include="_6_others\dependencies\AnonymousClassInterface.cs" />
+    <Compile Include="_6_others\dependencies\State.cs" />
+    <Compile Include="_6_others\Enum.cs" />
+    <Compile Include="_6_others\ThirdParty.cs" />
+    <Compile Include="_6_others\Varargs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sette-snippets-external\sette-snippets-external.csproj">
+      <Project>{0F9012CE-CC64-4583-B71C-6A39196AED08}</Project>
+      <Name>sette-snippets-external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
