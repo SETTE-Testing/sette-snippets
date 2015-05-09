@@ -13,8 +13,8 @@
 	<property name="sette.common.build.dir" location="../../sette-tool/src/sette-common/build" />
 	<property name="sette.snippets.external.build.xml" location="../sette-snippets-external/build.xml" />
 
-	<property name="source" value="1.7" />
-	<property name="target" value="1.7" />
+	<property name="source" value="1.8" />
+	<property name="target" value="1.8" />
 
 	<!-- target: main  -->
 	<target name="main" depends="compile" />
