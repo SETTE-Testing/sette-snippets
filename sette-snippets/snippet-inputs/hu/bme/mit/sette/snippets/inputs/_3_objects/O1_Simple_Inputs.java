@@ -202,7 +202,6 @@ public final class O1_Simple_Inputs {
         SimpleObject obj = new SimpleObject();
         obj.addAbs(3);
         obj.addAbs(0);
-        obj.addAbs(0);
         inputs.addByParameters(obj);
 
         inputs.addByParameters(new SimpleObject());
