@@ -30,12 +30,12 @@ namespace BME.MIT.SETTE.Basic.B1
 {
     public static class B1a_PrimitiveTypes
     {
-        public static bool oneParambool(bool x)
+        public static bool oneParamBoolean(bool x)
         {
             return !x;
         }
 
-        public static bool twoParambool(bool x, bool y)
+        public static bool twoParamBoolean(bool x, bool y)
         {
             return x ^ y;
         }

@@ -30,7 +30,7 @@ using BME.MIT.SETTE.Others.Dependencies;
 
 namespace BME.MIT.SETTE.Others
 {
-    public static class Varargs
+    public static class Others_Varargs
     {
         public static int guess(params int[] numbers)
         {

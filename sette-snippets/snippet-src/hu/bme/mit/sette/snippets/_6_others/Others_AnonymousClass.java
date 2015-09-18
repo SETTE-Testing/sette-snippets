@@ -21,36 +21,33 @@
  * limitations under the License.
  */
 
-package hu.bme.mit.sette.snippets._5_library;
+package hu.bme.mit.sette.snippets._6_others;
 
 import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.common.snippets.JavaVersion;
-import hu.bme.mit.sette.snippets.inputs._5_library.L2_Strings_Java7_Inputs;
+import hu.bme.mit.sette.snippets._6_others.dependencies.AnonymousClassInterface;
+import hu.bme.mit.sette.snippets.inputs._6_others.Others_AnonymousClass_Inputs;
 
-@SetteSnippetContainer(category = "L2", goal = "Check support for strings",
-        inputFactoryContainer = L2_Strings_Java7_Inputs.class,
-        requiredJavaVersion = JavaVersion.JAVA_7)
-public final class L2_Strings_Java7 {
-    private L2_Strings_Java7() {
+@SetteSnippetContainer(category = "Others", goal = "Check support for anonymous classes",
+        inputFactoryContainer = Others_AnonymousClass_Inputs.class)
+public final class Others_AnonymousClass {
+    private Others_AnonymousClass() {
         throw new UnsupportedOperationException("Static class");
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int switchString(String s) {
-        if (s == null) {
-            return -1;
-        }
+    public static int test(int x) {
+        AnonymousClassInterface a = new AnonymousClassInterface() {
+            @Override
+            public int method(int xx) {
+                if (xx < 0) {
+                    return -xx;
+                } else {
+                    return xx;
+                }
+            }
+        };
 
-        switch (s) {
-            case "case1":
-                return 1;
-
-            case "case2":
-                return 2;
-
-            default:
-                return 0;
-        }
+        return a.method(x);
     }
 }

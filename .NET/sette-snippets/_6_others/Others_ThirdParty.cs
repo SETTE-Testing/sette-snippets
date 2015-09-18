@@ -27,39 +27,49 @@
 using System;
 
 using BME.MIT.SETTE.Others.Dependencies;
+using BME.MIT.SETTE.External;
 
 namespace BME.MIT.SETTE.Others
 {
-    public static class AnonymousClass
+    public static class Others_ThirdParty
     {
-        // Anonymous class is a different concept in .NET, the Java anonymous class equivalent feature is delegate.
-        public delegate int Method(int x);
-
-        public static int test(int x)
+        public static bool minMax(int a, int b)
         {
-            //AnonymousClassInterface a = new AnonymousClassInterface() {			
-            //    public int method(int x) {
-            //        if (x < 0) {
-            //            return -x;
-            //        } else {
-            //            return x;
-            //        }
-            //    }
-            //};
-
-            Method method = delegate(int x_)
+            if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 20)
             {
-                if (x_ < 0)
-                {
-                    return -x_;
-                }
-                else
-                {
-                    return x_;
-                }
-            };
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-            return method(x);
+        public static bool minMaxWithOrder(int a, int b)
+        {
+            if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 20 && a < b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //@SetteRequiredStatementCoverage(value = 50)
+        public static bool minMaxImpossible(int a, int b)
+        {
+            if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 10
+                    && Math.Max(a, b) == 20)
+            {
+                // impossible
+                throw new Exception();
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

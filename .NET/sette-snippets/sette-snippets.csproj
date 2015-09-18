@@ -101,12 +101,12 @@
     <Compile Include="_5_library\L3_Wrappers.cs" />
     <Compile Include="_5_library\L4_Collections.cs" />
     <Compile Include="_5_library\LO_Other.cs" />
-    <Compile Include="_6_others\AnonymousClass.cs" />
     <Compile Include="_6_others\dependencies\AnonymousClassInterface.cs" />
     <Compile Include="_6_others\dependencies\State.cs" />
-    <Compile Include="_6_others\Enum.cs" />
-    <Compile Include="_6_others\ThirdParty.cs" />
-    <Compile Include="_6_others\Varargs.cs" />
+    <Compile Include="_6_others\Others_AnonymousClass.cs" />
+    <Compile Include="_6_others\Others_Enum.cs" />
+    <Compile Include="_6_others\Others_ThirdParty.cs" />
+    <Compile Include="_6_others\Others_Varargs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sette-snippets-external\sette-snippets-external.csproj">

@@ -30,7 +30,7 @@ using BME.MIT.SETTE.Others.Dependencies;
 
 namespace BME.MIT.SETTE.Others
 {
-    public static class Enum
+    public static class Others_Enum
     {
         //@SetteRequiredStatementCoverage(value = 83)
         public static int guessEnum(State s)

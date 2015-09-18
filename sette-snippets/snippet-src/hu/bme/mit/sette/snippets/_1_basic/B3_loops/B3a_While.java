@@ -1,27 +1,24 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
  *
- * SETTE is a tool to help the evaluation and comparison of symbolic execution
- * based test input generator tools.
+ * SETTE is a tool to help the evaluation and comparison of symbolic execution based test input 
+ * generator tools.
  *
  * Budapest University of Technology and Economics (BME)
  *
- * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
- * <micskeiz@mit.bme.hu>
+ * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
  *
- * Copyright 2014
+ * Copyright 2014-2015
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
+ * in compliance with the License. You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
+ * Unless required by applicable law or agreed to in writing, software distributed under the 
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+ * express or implied. See the License for the specific language governing permissions and 
+ * limitations under the License.
  */
 package hu.bme.mit.sette.snippets._1_basic.B3_loops;
 
@@ -29,8 +26,7 @@ import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B3_loops.B3a_While_Inputs;
 
-@SetteSnippetContainer(category = "B3",
-        goal = "Check support for the while looping statement",
+@SetteSnippetContainer(category = "B3", goal = "Check support for the while looping statement",
         inputFactoryContainer = B3a_While_Inputs.class)
 public final class B3a_While {
     private B3a_While() {
@@ -129,8 +125,7 @@ public final class B3a_While {
     }
 
     /**
-     * Calculates the sum of even numbers from 1 to min(limit, x), excluding
-     * skip
+     * Calculates the sum of even numbers from 1 to min(limit, x), excluding skip
      *
      * @param x
      * @param limit
@@ -172,8 +167,7 @@ public final class B3a_While {
 
     /**
      * Please note that the infinite loop may be removed by the compiler or JIT. <br/>
-     * See {@link https
-     * ://www.securecoding.cert.org/confluence/display/java/MSC01
+     * See {@link https ://www.securecoding.cert.org/confluence/display/java/MSC01
      * -J.+Do+not+use+an+empty+infinite+loop}.
      *
      * @param x
@@ -182,12 +176,13 @@ public final class B3a_While {
     @SetteRequiredStatementCoverage(value = 0)
     public static int infinite(int x) {
         while (true) {
+            // infinite loop
         }
     }
 
     /**
-     * Please note that it is highly unlikely that the infinite loop will be
-     * removed by the compiler or JIT.
+     * Please note that it is highly unlikely that the infinite loop will be removed by the compiler
+     * or JIT.
      *
      * @param x
      * @return
@@ -251,7 +246,7 @@ public final class B3a_While {
 
                     j++;
                 }
-            i++;
+                i++;
             }
         }
 

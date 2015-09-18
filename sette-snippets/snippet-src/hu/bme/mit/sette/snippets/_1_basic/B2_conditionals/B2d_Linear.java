@@ -1,36 +1,33 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
  *
- * SETTE is a tool to help the evaluation and comparison of symbolic execution
- * based test input generator tools.
+ * SETTE is a tool to help the evaluation and comparison of symbolic execution based test input 
+ * generator tools.
  *
  * Budapest University of Technology and Economics (BME)
  *
- * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
- * <micskeiz@mit.bme.hu>
+ * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
  *
- * Copyright 2014
+ * Copyright 2014-2015
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
+ * in compliance with the License. You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
+ * Unless required by applicable law or agreed to in writing, software distributed under the 
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+ * express or implied. See the License for the specific language governing permissions and 
+ * limitations under the License.
  */
+
 package hu.bme.mit.sette.snippets._1_basic.B2_conditionals;
 
 import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B2_conditionals.B2d_Linear_Inputs;
 
-@SetteSnippetContainer(category = "B2",
-        goal = "Check constraint solving for linear expressions",
+@SetteSnippetContainer(category = "B2", goal = "Check constraint solving for linear expressions",
         inputFactoryContainer = B2d_Linear_Inputs.class)
 public final class B2d_Linear {
     private B2d_Linear() {
@@ -160,8 +157,7 @@ public final class B2d_Linear {
      * 5x-y-z = 23<br/>
      * <br/>
      * Solution: {x, y, z} = {198/41, -30/41, 77/41}<br/>
-     * Solution with overflow (32bit integer): {x, y, z} = {-1257063594,
-     * 1361818898, 942797701}
+     * Solution with overflow (32bit integer): {x, y, z} = {-1257063594, 1361818898, 942797701}
      *
      * @param x
      * @param y
@@ -238,8 +234,8 @@ public final class B2d_Linear {
      * 5x-y-z = 23<br/>
      * <br/>
      * Solution: {x, y, z} = {198/41, -30/41, 77/41}<br/>
-     * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
-     * they may not be supported)
+     * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because they may not be
+     * supported)
      *
      * @param x
      * @param y
@@ -254,8 +250,8 @@ public final class B2d_Linear {
         float e2 = 3 * x + y - 2 * z;
         float e3 = 5 * x - y - z;
 
-        if (8.999f < e1 && e1 < 9.001f && 9.999f < e2 && e2 < 10.001f
-                && 22.999f < e3 && e3 < 23.001f) {
+        if (8.999f < e1 && e1 < 9.001f && 9.999f < e2 && e2 < 10.001f && 22.999f < e3
+                && e3 < 23.001f) {
             return true;
         } else {
             return false;
@@ -316,8 +312,8 @@ public final class B2d_Linear {
      * 5x-y-z = 23<br/>
      * <br/>
      * Solution: {x, y, z} = {198/41, -30/41, 77/41} <br/>
-     * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because
-     * they may not be supported)
+     * Threshold: 1e-3 (Note: constants and Math.abs() cannot be used because they may not be
+     * supported)
      *
      * @param x
      * @param y
@@ -332,8 +328,7 @@ public final class B2d_Linear {
         double e2 = 3 * x + y - 2 * z;
         double e3 = 5 * x - y - z;
 
-        if (8.999 < e1 && e1 < 9.001 && 9.999 < e2 && e2 < 10.001
-                && 22.999 < e3 && e3 < 23.001) {
+        if (8.999 < e1 && e1 < 9.001 && 9.999 < e2 && e2 < 10.001 && 22.999 < e3 && e3 < 23.001) {
             return true;
         } else {
             return false;

@@ -21,36 +21,21 @@
  * limitations under the License.
  */
 
-package hu.bme.mit.sette.snippets._5_library;
+package hu.bme.mit.sette.snippets.inputs._6_others;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.common.snippets.JavaVersion;
-import hu.bme.mit.sette.snippets.inputs._5_library.L2_Strings_Java7_Inputs;
+import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
 
-@SetteSnippetContainer(category = "L2", goal = "Check support for strings",
-        inputFactoryContainer = L2_Strings_Java7_Inputs.class,
-        requiredJavaVersion = JavaVersion.JAVA_7)
-public final class L2_Strings_Java7 {
-    private L2_Strings_Java7() {
+public final class Others_AnonymousClass_Inputs {
+    private Others_AnonymousClass_Inputs() {
         throw new UnsupportedOperationException("Static class");
     }
 
-    @SetteRequiredStatementCoverage(value = 100)
-    public static int switchString(String s) {
-        if (s == null) {
-            return -1;
-        }
+    public static SnippetInputContainer test() {
+        SnippetInputContainer inputs = new SnippetInputContainer(1);
 
-        switch (s) {
-            case "case1":
-                return 1;
+        inputs.addByParameters(1);
+        inputs.addByParameters(-1);
 
-            case "case2":
-                return 2;
-
-            default:
-                return 0;
-        }
+        return inputs;
     }
 }

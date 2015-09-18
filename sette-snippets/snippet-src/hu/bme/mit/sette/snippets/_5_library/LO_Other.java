@@ -1,28 +1,26 @@
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
  *
- * SETTE is a tool to help the evaluation and comparison of symbolic execution
- * based test input generator tools.
+ * SETTE is a tool to help the evaluation and comparison of symbolic execution based test input 
+ * generator tools.
  *
  * Budapest University of Technology and Economics (BME)
  *
- * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei
- * <micskeiz@mit.bme.hu>
+ * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
  *
- * Copyright 2014
+ * Copyright 2014-2015
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
+ * in compliance with the License. You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
+ * Unless required by applicable law or agreed to in writing, software distributed under the 
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+ * express or implied. See the License for the specific language governing permissions and 
+ * limitations under the License.
  */
+
 package hu.bme.mit.sette.snippets._5_library;
 
 import hu.bme.mit.sette.annotations.SetteIncludeCoverage;
@@ -37,8 +35,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@SetteSnippetContainer(category = "LO",
-        goal = "Check support for other built-in library features",
+@SetteSnippetContainer(category = "LO", goal = "Check support for other built-in library features",
         inputFactoryContainer = LO_Other_Inputs.class)
 public final class LO_Other {
     private LO_Other() {
@@ -74,8 +71,7 @@ public final class LO_Other {
     }
 
     @SetteRequiredStatementCoverage(value = 84)
-    @SetteIncludeCoverage(
-            classes = { FingerNumber.class },
+    @SetteIncludeCoverage(classes = { FingerNumber.class },
             methods = { "add(hu.bme.mit.sette.snippets._5_library.dependencies.FingerNumber)" })
     public static int inheritsAPIGuessTwoPrimitives(int x, int y) {
         FingerNumber a = new FingerNumber(x);
@@ -94,11 +90,9 @@ public final class LO_Other {
     }
 
     @SetteRequiredStatementCoverage(value = 84)
-    @SetteIncludeCoverage(
-            classes = { FingerNumber.class },
+    @SetteIncludeCoverage(classes = { FingerNumber.class },
             methods = { "add(hu.bme.mit.sette.snippets._5_library.dependencies.FingerNumber)" })
-    public static int inheritsAPIGuessTwoObjects(FingerNumber a,
-            FingerNumber b) {
+    public static int inheritsAPIGuessTwoObjects(FingerNumber a, FingerNumber b) {
         if (a == null || b == null) {
             return -1;
         }
@@ -116,10 +110,9 @@ public final class LO_Other {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { DateParser.class },
-            methods = { "parse(java.lang.String)" })
+    @SetteIncludeCoverage(classes = { DateParser.class }, methods = { "parse(java.lang.String)" })
     public static int associatesAPIGuessValidDateFormat(String s) {
-        Date parsed = new DateParser().parse(s);
+        Date parsed = DateParser.parse(s);
         if (parsed != null) {
             return 1;
         } else {
@@ -128,10 +121,9 @@ public final class LO_Other {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { DateParser.class },
-            methods = { "parse(java.lang.String)" })
+    @SetteIncludeCoverage(classes = { DateParser.class }, methods = { "parse(java.lang.String)" })
     public static int associatesAPIGuessDate(String s) {
-        Date parsed = new DateParser().parse(s);
+        Date parsed = DateParser.parse(s);
         if (parsed != null) {
             if (parsed.getTime() == 685843200) {
                 // 1991-09-26
@@ -153,7 +145,7 @@ public final class LO_Other {
         try {
             UUID.fromString(s);
             return 1;
-        } catch (Exception e) {
+        } catch (Exception ex) {
             return 0;
         }
     }
@@ -172,7 +164,7 @@ public final class LO_Other {
             } else {
                 return -2;
             }
-        } catch (Exception e) {
+        } catch (Exception ex) {
             return 0;
         }
     }
@@ -196,8 +188,7 @@ public final class LO_Other {
             return -1;
         }
 
-        Pattern p = Pattern.compile("[a-z0-9]{6}",
-                Pattern.CASE_INSENSITIVE);
+        Pattern p = Pattern.compile("[a-z0-9]{6}", Pattern.CASE_INSENSITIVE);
         Matcher m = p.matcher(s);
 
         if (m.matches()) {
