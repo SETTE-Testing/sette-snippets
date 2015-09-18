@@ -1,21 +1,17 @@
-#
-# Ant
-#
+# Created by https://www.gitignore.io/api/gradle,eclipse,java
+
+### Gradle ###
+.gradle
 build/
-dist/
 
-#
-# Java
-#
+# Ignore Gradle GUI config
+gradle-app.setting
 
-*.class
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
 
-#
-# Eclipse
-#
+### Eclipse ###
 *.pydevproject
 .metadata
 .gradle
@@ -29,6 +25,9 @@ local.properties
 .settings/
 .loadpath
 
+# Eclipse Core
+.project
+
 # External tool builders
 .externalToolBuilders/
 
@@ -38,12 +37,32 @@ local.properties
 # CDT-specific
 .cproject
 
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java annotation processor (APT)
+.factorypath
+
 # PDT-specific
 .buildpath
 
-# sbteclipse plugin 
+# sbteclipse plugin
 .target
 
 # TeXlipse plugin
 .texlipse
 
+
+### Java ###
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
