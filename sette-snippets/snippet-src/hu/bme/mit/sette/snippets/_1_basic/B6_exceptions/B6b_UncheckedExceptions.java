@@ -95,7 +95,7 @@ public final class B6b_UncheckedExceptions {
         if (x % 100 == 0) {
             return x;
         } else {
-            return B6b_UncheckedExceptions.recursive_(x - 1, depth + 1);
+            return recursive_(x - 1, depth + 1);
         }
     }
 
@@ -104,7 +104,7 @@ public final class B6b_UncheckedExceptions {
     @SetteRequiredStatementCoverage(value = 100)
     public static int tryCatch(int x, int y) {
         try {
-            return B6b_UncheckedExceptions.calledFunction(x, y);
+            return calledFunction(x, y);
         } catch (RuntimeException ex) {
             throw new MyRuntimeException();
         }
@@ -115,7 +115,7 @@ public final class B6b_UncheckedExceptions {
     @SetteRequiredStatementCoverage(value = 100)
     public static int tryCatchFinally(int x, int y, int z) {
         try {
-            return B6b_UncheckedExceptions.calledFunction(x, y);
+            return calledFunction(x, y);
         } catch (RuntimeException ex) {
             throw new MyRuntimeException();
         } finally {

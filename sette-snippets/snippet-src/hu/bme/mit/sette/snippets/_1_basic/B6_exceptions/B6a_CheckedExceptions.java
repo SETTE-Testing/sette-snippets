@@ -95,7 +95,7 @@ public final class B6a_CheckedExceptions {
         if (x % 100 == 0) {
             return x;
         } else {
-            return B6a_CheckedExceptions.recursive_(x - 1, depth + 1);
+            return recursive_(x - 1, depth + 1);
         }
     }
 
@@ -104,7 +104,7 @@ public final class B6a_CheckedExceptions {
     @SetteRequiredStatementCoverage(value = 100)
     public static int tryCatch(int x, int y) throws MyException {
         try {
-            return B6a_CheckedExceptions.calledFunction(x, y);
+            return calledFunction(x, y);
         } catch (Exception ex) {
             throw new MyException();
         }
@@ -115,7 +115,7 @@ public final class B6a_CheckedExceptions {
     @SetteRequiredStatementCoverage(value = 100)
     public static int tryCatchFinally(int x, int y, int z) throws MyException {
         try {
-            return B6a_CheckedExceptions.calledFunction(x, y);
+            return calledFunction(x, y);
         } catch (Exception ex) {
             throw new MyException();
         } finally {
