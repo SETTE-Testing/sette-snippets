@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("sette-snippets")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SETTE Snippets .NET")]
+[assembly: AssemblyDescription("Code snippets for evaluating test input generator tools with SETTE")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Budapest University of Technology and Economics (BME)")]
 [assembly: AssemblyProduct("sette-snippets")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
