@@ -7,11 +7,9 @@
 	<property name="snippet-src.dir" location="snippet-src" />
 	<property name="snippet-inputs.dir" location="snippet-inputs" />
 	<property name="build.dir" location="build" />
-	<property name="snippet.libs.dir" location="snippet-libs" />
 
 	<property name="sette.common.build.xml" location="../../sette-tool/src/sette-common/build.xml" />
 	<property name="sette.common.build.dir" location="../../sette-tool/src/sette-common/build" />
-	<property name="sette.snippets.external.build.xml" location="../sette-snippets-external/build.xml" />
 
 	<property name="source" value="1.8" />
 	<property name="target" value="1.8" />
@@ -27,13 +25,11 @@
 	<!-- target: compile  -->
 	<target name="compile" depends="clean">
 		<ant antfile="${sette.common.build.xml}" target="main" inheritall="no" />
-		<ant antfile="${sette.snippets.external.build.xml}" target="main" inheritall="no" />
 
 		<mkdir dir="${build.dir}" />
 		<javac destdir="${build.dir}" includeantruntime="false" source="${source}" target="${target}" debug="yes">
 			<classpath>
 				<pathelement path="${sette.common.build.dir}" />
-				<fileset dir="${snippet.libs.dir}" includes="**/*.jar" />
 			</classpath>
 			<src path="${snippet-src.dir}" />
 			<src path="${snippet-inputs.dir}" />
