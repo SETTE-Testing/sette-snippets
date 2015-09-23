@@ -220,7 +220,7 @@ public final class O1_Simple_Inputs {
     }
 
     public static SnippetInputContainer fullCoverage() {
-        SnippetInputContainer inputs = new SnippetInputContainer(1);
+        SnippetInputContainer inputs = new SnippetInputContainer(4);
 
         inputs.addByParameters((Object) null, 0, 0, 0);
         inputs.addByParameters(new SimpleObject(), 5, -5, 2);

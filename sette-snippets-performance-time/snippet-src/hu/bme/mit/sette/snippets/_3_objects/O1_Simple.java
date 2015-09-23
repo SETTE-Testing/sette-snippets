@@ -193,7 +193,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 85)
+    @SetteRequiredStatementCoverage(value = 83)
     public static int guessImpossibleOperationCountParams(int oc) {
         SimpleObject obj = new SimpleObject();
 
@@ -209,7 +209,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 87)
+    @SetteRequiredStatementCoverage(value = 85)
     public static int guessImpossibleOperationCount(SimpleObject obj, int oc) {
         if (obj == null) {
             return -1;

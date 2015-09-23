@@ -79,6 +79,6 @@ public final class B1e_BitwiseOperators_Inputs {
     }
 
     public static SnippetInputContainer negate() {
-        return new SnippetInputContainer(1).addByParameters(1, 1);
+        return new SnippetInputContainer(1).addByParameters(1);
     }
 }

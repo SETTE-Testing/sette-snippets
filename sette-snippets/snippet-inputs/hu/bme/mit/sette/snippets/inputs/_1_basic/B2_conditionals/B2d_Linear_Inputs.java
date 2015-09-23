@@ -91,7 +91,7 @@ public final class B2d_Linear_Inputs {
     }
 
     public static SnippetInputContainer twoParamsFloat() {
-        SnippetInputContainer inputs = new SnippetInputContainer(1);
+        SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(4f, -0.5f);
         inputs.addByParameters(0, 0);
@@ -100,10 +100,10 @@ public final class B2d_Linear_Inputs {
     }
 
     public static SnippetInputContainer threeParamsFloat() {
-        SnippetInputContainer inputs = new SnippetInputContainer(1);
+        SnippetInputContainer inputs = new SnippetInputContainer(3);
 
         inputs.addByParameters(198f / 41f, -30f / 41f, 77f / 41f);
-        inputs.addByParameters(0, 0);
+        inputs.addByParameters(0, 0, 0);
 
         return inputs;
     }
@@ -118,7 +118,7 @@ public final class B2d_Linear_Inputs {
     }
 
     public static SnippetInputContainer twoParamsDouble() {
-        SnippetInputContainer inputs = new SnippetInputContainer(1);
+        SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(4, -0.5);
         inputs.addByParameters(0, 0);
@@ -127,10 +127,10 @@ public final class B2d_Linear_Inputs {
     }
 
     public static SnippetInputContainer threeParamsDouble() {
-        SnippetInputContainer inputs = new SnippetInputContainer(1);
+        SnippetInputContainer inputs = new SnippetInputContainer(3);
 
         inputs.addByParameters(198.0 / 41.0, -30.0 / 41.0, 77.0 / 41.0);
-        inputs.addByParameters(0, 0);
+        inputs.addByParameters(0, 0, 0);
 
         return inputs;
     }

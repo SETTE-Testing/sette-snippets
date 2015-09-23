@@ -41,7 +41,7 @@ public final class L3_Wrappers_Inputs {
     }
 
     public static SnippetInputContainer integerOverflow() {
-        SnippetInputContainer inputs = new SnippetInputContainer(1);
+        SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(Integer.MAX_VALUE, new Integer(1));
         inputs.addByParameters(new Integer(0), new Integer(0));
