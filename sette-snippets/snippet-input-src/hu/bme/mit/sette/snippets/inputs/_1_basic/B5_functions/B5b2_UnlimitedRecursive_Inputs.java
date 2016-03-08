@@ -25,8 +25,8 @@ package hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions;
 
 import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
 
-public final class B5b_UnlimitedRecursive_Inputs {
-    private B5b_UnlimitedRecursive_Inputs() {
+public final class B5b2_UnlimitedRecursive_Inputs {
+    private B5b2_UnlimitedRecursive_Inputs() {
         throw new UnsupportedOperationException("Static class");
     }
 

@@ -25,8 +25,8 @@ package hu.bme.mit.sette.snippets.inputs._1_basic.B4_arrays;
 
 import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
 
-public final class B4_SafeArrays_Inputs {
-    private B4_SafeArrays_Inputs() {
+public final class B4a_SafeArrays_Inputs {
+    private B4a_SafeArrays_Inputs() {
         throw new UnsupportedOperationException("Static class");
     }
 
@@ -61,7 +61,7 @@ public final class B4_SafeArrays_Inputs {
     public static SnippetInputContainer fromParamsWithIndex() {
         SnippetInputContainer inputs = new SnippetInputContainer(4);
 
-        inputs.addByParameters(0, 0, 0, -1);
+        inputs.addByParameters(1, 2, 0, -1);
         inputs.addByParameters(1, 2, 3, 2);
         inputs.addByParameters(0, 0, 0, 0);
 

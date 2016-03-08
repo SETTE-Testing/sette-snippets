@@ -25,8 +25,8 @@ package hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions;
 
 import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
 
-public final class B5a_CallPrivate_Inputs {
-    private B5a_CallPrivate_Inputs() {
+public final class B5a2_CallPrivate_Inputs {
+    private B5a2_CallPrivate_Inputs() {
         throw new UnsupportedOperationException("Static class");
     }
 

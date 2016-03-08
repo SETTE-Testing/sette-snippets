@@ -39,19 +39,19 @@ public final class B1a_PrimitiveTypes_Inputs {
     }
 
     public static SnippetInputContainer oneParamByte() {
-        return new SnippetInputContainer(1).addByParameters(1);
+        return new SnippetInputContainer(1).addByParameters((byte) 1);
     }
 
     public static SnippetInputContainer twoParamByte() {
-        return new SnippetInputContainer(2).addByParameters(1, 1);
+        return new SnippetInputContainer(2).addByParameters((byte) 1, (byte) 1);
     }
 
     public static SnippetInputContainer oneParamShort() {
-        return new SnippetInputContainer(1).addByParameters(1);
+        return new SnippetInputContainer(1).addByParameters((short) 1);
     }
 
     public static SnippetInputContainer twoParamShort() {
-        return new SnippetInputContainer(2).addByParameters(1, 1);
+        return new SnippetInputContainer(2).addByParameters((short) 1, (short) 1);
     }
 
     public static SnippetInputContainer oneParamInt() {

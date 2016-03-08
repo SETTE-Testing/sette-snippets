@@ -23,11 +23,11 @@
 
 package hu.bme.mit.sette.snippets.inputs._5_library;
 
-import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
+
+import hu.bme.mit.sette.common.snippets.SnippetInputContainer;
 
 public final class L4_Collections_Inputs {
     private L4_Collections_Inputs() {
@@ -74,8 +74,8 @@ public final class L4_Collections_Inputs {
     public static SnippetInputContainer guessElementAndIndex() {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
-        inputs.addByExpectedAndParameters(IndexOutOfBoundsException.class, -1, 0);
-        inputs.addByParameters(0, 10);
+        inputs.addByExpectedAndParameters(IndexOutOfBoundsException.class, 0, -1);
+        inputs.addByParameters(10, 0);
         inputs.addByParameters(0, 0);
 
         return inputs;

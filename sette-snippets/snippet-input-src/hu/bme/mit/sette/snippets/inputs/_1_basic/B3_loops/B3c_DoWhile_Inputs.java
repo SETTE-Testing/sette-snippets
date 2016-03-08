@@ -100,6 +100,8 @@ public final class B3c_DoWhile_Inputs {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(10, 10);
+        inputs.addByParameters(6, 6);
+        inputs.addByParameters(8, 8);
 
         return inputs;
     }

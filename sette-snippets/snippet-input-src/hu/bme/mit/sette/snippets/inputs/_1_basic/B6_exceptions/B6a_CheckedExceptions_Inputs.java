@@ -92,7 +92,7 @@ public final class B6a_CheckedExceptions_Inputs {
         inputs.addByParameters(1, -1, 0);
         inputs.addByParameters(-1, -1, 0);
         inputs.addByExpectedAndParameters(MyException.class, 0, 0, 0);
-        inputs.addByExpectedAndParameters(MyException.class, 0, 0, 1); // absorb
+        inputs.addByParameters(0, 0, 1); // absorb
         // exception
 
         return inputs;
