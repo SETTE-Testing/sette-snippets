@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="snippet-src"/>
-	<classpathentry kind="src" path="snippet-inputs"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/sette-common"/>
-	<classpathentry kind="lib" path="snippet-libs/sette-snippets-external.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="output" path="bin"/>
+  <classpathentry kind="output" path="bin" />
+  <classpathentry kind="src" path="snippet-src" />
+  <classpathentry kind="src" path="snippet-input-src" />
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" />
+  <classpathentry kind="src" path="/sette-common" />
+  <classpathentry kind="src" path="/sette-snippets-external" />
 </classpath>
