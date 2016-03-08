@@ -22,8 +22,8 @@
  */
 package hu.bme.mit.sette.snippets._1_basic.B2_conditionals;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B2_conditionals.B2a_IfElse_Inputs;
 
 @SetteSnippetContainer(category = "B2",

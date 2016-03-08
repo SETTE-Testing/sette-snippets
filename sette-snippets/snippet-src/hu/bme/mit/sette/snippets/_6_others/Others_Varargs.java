@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._6_others;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._6_others.Others_Varargs_Inputs;
 
 @SetteSnippetContainer(category = "Others", goal = "Check support for variable argument lists",
@@ -35,7 +35,7 @@ public final class Others_Varargs {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int guess(int... numbers) {
+    public static int varargsGuess(int... numbers) {
         if (numbers == null || numbers.length < 2) {
             // make safe
             return -1;
@@ -49,7 +49,7 @@ public final class Others_Varargs {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int guessWithLength(int... numbers) {
+    public static int varargsGuessWithLength(int... numbers) {
         if (numbers == null) {
             // make safe
             return -1;
@@ -63,7 +63,7 @@ public final class Others_Varargs {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int[] iterateWithFor(int... numbers) {
+    public static int[] varargsIterateWithFor(int... numbers) {
         if (numbers == null) {
             // make safe
             return new int[0];
@@ -84,7 +84,7 @@ public final class Others_Varargs {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static int[] iterateWithForeach(int... numbers) {
+    public static int[] varargsIterateWithForeach(int... numbers) {
         if (numbers == null) {
             // make safe
             return new int[0];

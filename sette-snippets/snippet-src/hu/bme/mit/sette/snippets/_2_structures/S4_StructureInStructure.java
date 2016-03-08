@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._2_structures;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._2_structures.dependencies.CoordinateStructure;
 import hu.bme.mit.sette.snippets._2_structures.dependencies.SegmentStructure;
 import hu.bme.mit.sette.snippets.inputs._2_structures.S4_StructureInStructure_Inputs;

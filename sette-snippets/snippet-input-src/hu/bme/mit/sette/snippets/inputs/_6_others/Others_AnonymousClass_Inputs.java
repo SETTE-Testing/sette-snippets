@@ -30,7 +30,7 @@ public final class Others_AnonymousClass_Inputs {
         throw new UnsupportedOperationException("Static class");
     }
 
-    public static SnippetInputContainer test() {
+    public static SnippetInputContainer anonymousClassTest() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters(1);

@@ -29,7 +29,7 @@ public final class Others_Varargs_Inputs {
         throw new UnsupportedOperationException("Static class");
     }
 
-    public static SnippetInputContainer guess() {
+    public static SnippetInputContainer varargsGuess() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);
@@ -39,7 +39,7 @@ public final class Others_Varargs_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer guessWithLength() {
+    public static SnippetInputContainer varargsGuessWithLength() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);
@@ -49,7 +49,7 @@ public final class Others_Varargs_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer iterateWithFor() {
+    public static SnippetInputContainer varargsIterateWithFor() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);
@@ -59,7 +59,7 @@ public final class Others_Varargs_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer iterateWithForeach() {
+    public static SnippetInputContainer varargsIterateWithForeach() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);

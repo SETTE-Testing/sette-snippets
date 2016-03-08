@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._5_library;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._5_library.L1_Arithmetics_Inputs;
 
 @SetteSnippetContainer(category = "L1", goal = "Check support for complex arithmetic functions",
@@ -183,7 +183,7 @@ public final class L1_Arithmetics {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static boolean logGuessBaseAndArgument(double x, double y) {
-        double l = Math.log(y) / Math.log(x) - 2;
+        double l = Math.log(x) / Math.log(y) - 2;
 
         if (-L1_Arithmetics.EPSILON < l && l < L1_Arithmetics.EPSILON) {
             return true;

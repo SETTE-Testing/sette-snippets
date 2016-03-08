@@ -23,13 +23,13 @@
 
 package hu.bme.mit.sette.snippets._5_library.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * Class realising a date parser based on regular expressions.
@@ -49,7 +49,8 @@ public final class DateParser {
             Calendar cal = Calendar.getInstance();
             cal.setTimeZone(TimeZone.getTimeZone("GMT"));
             cal.set(Integer.parseInt(m.group(1)), Integer.parseInt(m.group(2)) - 1,
-                    Integer.parseInt(m.group(3)));
+                    Integer.parseInt(m.group(3)), 0, 0, 0);
+            cal.set(Calendar.MILLISECOND, 0);
             return cal.getTime();
         } else {
             return null;

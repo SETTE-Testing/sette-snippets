@@ -31,7 +31,7 @@ public final class Others_Enum_Inputs {
         throw new UnsupportedOperationException("Static class");
     }
 
-    public static SnippetInputContainer guessEnum() {
+    public static SnippetInputContainer enumGuess() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);
@@ -43,7 +43,7 @@ public final class Others_Enum_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer guessEnumString() {
+    public static SnippetInputContainer enumGuessString() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);
@@ -55,7 +55,7 @@ public final class Others_Enum_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer guessEnumOrdinal() {
+    public static SnippetInputContainer enumGuessOrdinal() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);
@@ -67,7 +67,7 @@ public final class Others_Enum_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer switchEnum() {
+    public static SnippetInputContainer enumSwitch() {
         SnippetInputContainer inputs = new SnippetInputContainer(1);
 
         inputs.addByParameters((Object) null);

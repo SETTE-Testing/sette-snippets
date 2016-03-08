@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._3_objects.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * The extended object type used by the code snippets O3.

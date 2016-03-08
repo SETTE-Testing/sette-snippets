@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._6_others;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.externals.MyMath;
 import hu.bme.mit.sette.snippets.inputs._6_others.Others_ThirdParty_Inputs;
 
@@ -36,7 +36,7 @@ public final class Others_ThirdParty {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static boolean minMax(int a, int b) {
+    public static boolean thirdPartyMinMax(int a, int b) {
         if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 20) {
             return true;
         } else {
@@ -45,7 +45,7 @@ public final class Others_ThirdParty {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    public static boolean minMaxWithOrder(int a, int b) {
+    public static boolean thirdPartyMinMaxWithOrder(int a, int b) {
         if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 20 && a < b) {
             return true;
         } else {
@@ -54,7 +54,7 @@ public final class Others_ThirdParty {
     }
 
     @SetteRequiredStatementCoverage(value = 50)
-    public static boolean minMaxImpossible(int a, int b) {
+    public static boolean thirdPartyMinMaxImpossible(int a, int b) {
         if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 10 && Math.max(a, b) == 20) {
             // impossible
             throw new RuntimeException();

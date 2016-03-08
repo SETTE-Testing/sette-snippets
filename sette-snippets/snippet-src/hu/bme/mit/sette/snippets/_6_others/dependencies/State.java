@@ -23,12 +23,15 @@
 
 package hu.bme.mit.sette.snippets._6_others.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * Enumeration used by the snippets.
  */
 @SetteDependency
 public enum State {
-    STARTED, PAUSED, STOPPED, IDLE
+    STARTED,
+    PAUSED,
+    STOPPED,
+    IDLE
 }

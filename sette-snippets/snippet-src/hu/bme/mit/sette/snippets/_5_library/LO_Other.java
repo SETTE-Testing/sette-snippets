@@ -23,17 +23,17 @@
 
 package hu.bme.mit.sette.snippets._5_library;
 
-import hu.bme.mit.sette.annotations.SetteIncludeCoverage;
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets._5_library.dependencies.DateParser;
-import hu.bme.mit.sette.snippets._5_library.dependencies.FingerNumber;
-import hu.bme.mit.sette.snippets.inputs._5_library.LO_Other_Inputs;
-
 import java.util.Date;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import hu.bme.mit.sette.common.annotations.SetteIncludeCoverage;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.snippets._5_library.dependencies.DateParser;
+import hu.bme.mit.sette.snippets._5_library.dependencies.FingerNumber;
+import hu.bme.mit.sette.snippets.inputs._5_library.LO_Other_Inputs;
 
 @SetteSnippetContainer(category = "LO", goal = "Check support for other built-in library features",
         inputFactoryContainer = LO_Other_Inputs.class)
@@ -125,7 +125,7 @@ public final class LO_Other {
     public static int associatesAPIGuessDate(String s) {
         Date parsed = DateParser.parse(s);
         if (parsed != null) {
-            if (parsed.getTime() == 685843200) {
+            if (parsed.getTime() == 685843200000L) {
                 // 1991-09-26
                 return 1;
             } else {

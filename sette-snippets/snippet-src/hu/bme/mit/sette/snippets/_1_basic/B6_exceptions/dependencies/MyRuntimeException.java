@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._1_basic.B6_exceptions.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * Own runtime exception class.

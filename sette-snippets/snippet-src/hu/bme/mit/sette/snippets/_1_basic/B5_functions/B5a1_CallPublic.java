@@ -23,16 +23,16 @@
 
 package hu.bme.mit.sette.snippets._1_basic.B5_functions;
 
-import hu.bme.mit.sette.annotations.SetteIncludeCoverage;
-import hu.bme.mit.sette.annotations.SetteNotSnippet;
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions.B5a_CallPublic_Inputs;
+import hu.bme.mit.sette.common.annotations.SetteIncludeCoverage;
+import hu.bme.mit.sette.common.annotations.SetteNotSnippet;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions.B5a1_CallPublic_Inputs;
 
 @SetteSnippetContainer(category = "B5", goal = "Check support for public function calls",
-        inputFactoryContainer = B5a_CallPublic_Inputs.class)
-public final class B5a_CallPublic {
-    private B5a_CallPublic() {
+        inputFactoryContainer = B5a1_CallPublic_Inputs.class)
+public final class B5a1_CallPublic {
+    private B5a1_CallPublic() {
         throw new UnsupportedOperationException("Static class");
     }
 
@@ -52,14 +52,14 @@ public final class B5a_CallPublic {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { B5a_CallPublic.class },
+    @SetteIncludeCoverage(classes = { B5a1_CallPublic.class },
             methods = { "calledFunction(int, int)" })
     public static int simple(int x, int y) {
         return calledFunction(x, y);
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { B5a_CallPublic.class },
+    @SetteIncludeCoverage(classes = { B5a1_CallPublic.class },
             methods = { "calledFunction(int, int)" })
     public static int useReturnValue(int x, int y) {
         if (calledFunction(x, y) >= 0) {
@@ -70,7 +70,7 @@ public final class B5a_CallPublic {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { B5a_CallPublic.class },
+    @SetteIncludeCoverage(classes = { B5a1_CallPublic.class },
             methods = { "calledFunction(int, int)" })
     public static int conditionalCall(int x, int y, boolean z) {
         if (z) {

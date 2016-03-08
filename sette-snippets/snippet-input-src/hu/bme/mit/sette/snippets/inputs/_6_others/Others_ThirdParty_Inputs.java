@@ -30,7 +30,7 @@ public final class Others_ThirdParty_Inputs {
         throw new UnsupportedOperationException("Static class");
     }
 
-    public static SnippetInputContainer minMax() {
+    public static SnippetInputContainer thirdPartyMinMax() {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(-10, 20);
@@ -39,7 +39,7 @@ public final class Others_ThirdParty_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer minMaxWithOrder() {
+    public static SnippetInputContainer thirdPartyMinMaxWithOrder() {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(-10, 20);
@@ -48,7 +48,7 @@ public final class Others_ThirdParty_Inputs {
         return inputs;
     }
 
-    public static SnippetInputContainer minMaxImpossible() {
+    public static SnippetInputContainer thirdPartyMinMaxImpossible() {
         SnippetInputContainer inputs = new SnippetInputContainer(2);
 
         inputs.addByParameters(0, 0);

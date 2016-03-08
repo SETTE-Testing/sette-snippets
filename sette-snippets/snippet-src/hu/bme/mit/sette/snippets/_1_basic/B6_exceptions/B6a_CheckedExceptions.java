@@ -23,9 +23,9 @@
 
 package hu.bme.mit.sette.snippets._1_basic.B6_exceptions;
 
-import hu.bme.mit.sette.annotations.SetteIncludeCoverage;
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteIncludeCoverage;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._1_basic.B6_exceptions.dependencies.MyException;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B6_exceptions.B6a_CheckedExceptions_Inputs;
 

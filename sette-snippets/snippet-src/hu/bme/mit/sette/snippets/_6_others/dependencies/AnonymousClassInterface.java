@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._6_others.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * Interface for anonymous class.

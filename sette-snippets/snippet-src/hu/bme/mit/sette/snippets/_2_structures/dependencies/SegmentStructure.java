@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._2_structures.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * A structure describing a segment. Used by the code snippets in S4.

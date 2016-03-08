@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._3_objects.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * An interface for a value setter-getter. Used by the code snippets in O3.

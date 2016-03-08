@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._4_generics;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._4_generics.G1_Functions_Inputs;
 
 @SetteSnippetContainer(category = "G1", goal = "Check support for generic functions",

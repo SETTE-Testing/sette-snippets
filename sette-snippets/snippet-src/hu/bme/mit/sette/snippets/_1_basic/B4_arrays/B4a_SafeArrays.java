@@ -22,9 +22,9 @@
  */
 package hu.bme.mit.sette.snippets._1_basic.B4_arrays;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets.inputs._1_basic.B4_arrays.B4_SafeArrays_Inputs;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.snippets.inputs._1_basic.B4_arrays.B4a_SafeArrays_Inputs;
 
 /**
  * Safe arrays: using safe operations, i.e. IndexOutOfBoundsException and NullPointerException
@@ -33,9 +33,9 @@ import hu.bme.mit.sette.snippets.inputs._1_basic.B4_arrays.B4_SafeArrays_Inputs;
  * NullPointerException may occur.
  */
 @SetteSnippetContainer(category = "B4", goal = "Check support for arrays using safe operations",
-        inputFactoryContainer = B4_SafeArrays_Inputs.class)
-public final class B4_SafeArrays {
-    private B4_SafeArrays() {
+        inputFactoryContainer = B4a_SafeArrays_Inputs.class)
+public final class B4a_SafeArrays {
+    private B4a_SafeArrays() {
         throw new UnsupportedOperationException("Static class");
     }
 

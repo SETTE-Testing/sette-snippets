@@ -23,21 +23,21 @@
 
 package hu.bme.mit.sette.snippets._1_basic.B5_functions;
 
-import hu.bme.mit.sette.annotations.SetteIncludeCoverage;
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions.B5b_LimitedRecursive_Inputs;
+import hu.bme.mit.sette.common.annotations.SetteIncludeCoverage;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions.B5b1_LimitedRecursive_Inputs;
 
 @SetteSnippetContainer(category = "B5",
         goal = "Check support for recursive function calls (with depth limit)",
-        inputFactoryContainer = B5b_LimitedRecursive_Inputs.class)
-public final class B5b_LimitedRecursive {
-    private B5b_LimitedRecursive() {
+        inputFactoryContainer = B5b1_LimitedRecursive_Inputs.class)
+public final class B5b1_LimitedRecursive {
+    private B5b1_LimitedRecursive() {
         throw new UnsupportedOperationException("Static class");
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { B5b_LimitedRecursive.class },
+    @SetteIncludeCoverage(classes = { B5b1_LimitedRecursive.class },
             methods = { "simple_(int, int)" })
     public static int simple(int x) {
         return simple_(x, 1);
@@ -56,7 +56,7 @@ public final class B5b_LimitedRecursive {
     }
 
     @SetteRequiredStatementCoverage(value = 100)
-    @SetteIncludeCoverage(classes = { B5b_LimitedRecursive.class },
+    @SetteIncludeCoverage(classes = { B5b1_LimitedRecursive.class },
             methods = { "fibonacci_(int, int)" })
     public static int fibonacci(int x) {
         return fibonacci_(x, 1);

@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._6_others;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._6_others.dependencies.State;
 import hu.bme.mit.sette.snippets.inputs._6_others.Others_Enum_Inputs;
 
@@ -36,7 +36,7 @@ public final class Others_Enum {
     }
 
     @SetteRequiredStatementCoverage(value = 83)
-    public static int guessEnum(State s) {
+    public static int enumGuess(State s) {
         if (s == null) {
             return -1;
         } else if (s == State.STARTED) {
@@ -54,7 +54,7 @@ public final class Others_Enum {
     }
 
     @SetteRequiredStatementCoverage(value = 80)
-    public static int guessEnumString(State s) {
+    public static int enumGuessString(State s) {
         if (s == null) {
             return -1;
         } else if (s.name().equals("STARTED")) {
@@ -72,7 +72,7 @@ public final class Others_Enum {
     }
 
     @SetteRequiredStatementCoverage(value = 80)
-    public static int guessEnumOrdinal(State s) {
+    public static int enumGuessOrdinal(State s) {
         if (s == null) {
             return -1;
         } else if (s.ordinal() == 0) {
@@ -90,7 +90,7 @@ public final class Others_Enum {
     }
 
     @SetteRequiredStatementCoverage(value = 84)
-    public static int switchEnum(State s) {
+    public static int enumSwitch(State s) {
         if (s == null) {
             return -1;
         }

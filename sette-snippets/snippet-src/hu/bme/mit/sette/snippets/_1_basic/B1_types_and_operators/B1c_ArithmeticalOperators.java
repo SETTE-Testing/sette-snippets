@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._1_basic.B1_types_and_operators;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B1_types_and_operators.B1c_ArithmeticalOperators_Inputs;
 
 @SetteSnippetContainer(category = "B1", goal = "Check support for arithmetical operators",

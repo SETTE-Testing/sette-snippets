@@ -23,15 +23,15 @@
 
 package hu.bme.mit.sette.snippets._1_basic.B5_functions;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions.B5b_UnlimitedRecursive_Inputs;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.snippets.inputs._1_basic.B5_functions.B5b2_UnlimitedRecursive_Inputs;
 
 @SetteSnippetContainer(category = "B5",
         goal = "Check support for recursive function calls (without depth limit)",
-        inputFactoryContainer = B5b_UnlimitedRecursive_Inputs.class)
-public final class B5b_UnlimitedRecursive {
-    private B5b_UnlimitedRecursive() {
+        inputFactoryContainer = B5b2_UnlimitedRecursive_Inputs.class)
+public final class B5b2_UnlimitedRecursive {
+    private B5b2_UnlimitedRecursive() {
         throw new UnsupportedOperationException("Static class");
     }
 
