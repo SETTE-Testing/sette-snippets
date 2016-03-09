@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._4_generics;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._4_generics.dependencies.GenericTriplet;
 import hu.bme.mit.sette.snippets._4_generics.dependencies.IntegerTriplet;
 import hu.bme.mit.sette.snippets._4_generics.dependencies.SafeGenericTriplet;

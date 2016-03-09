@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._5_library;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.common.snippets.JavaVersion;
 import hu.bme.mit.sette.snippets.inputs._5_library.L2_Strings_Java7_Inputs;
 

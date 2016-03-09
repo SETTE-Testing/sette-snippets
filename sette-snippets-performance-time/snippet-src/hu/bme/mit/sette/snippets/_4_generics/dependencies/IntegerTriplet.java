@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._4_generics.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * A generic collection used by the code snippets. This collection holds exactly 3 integers.

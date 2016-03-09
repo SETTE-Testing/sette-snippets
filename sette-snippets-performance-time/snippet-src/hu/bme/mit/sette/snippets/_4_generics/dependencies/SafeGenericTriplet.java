@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._4_generics.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  *

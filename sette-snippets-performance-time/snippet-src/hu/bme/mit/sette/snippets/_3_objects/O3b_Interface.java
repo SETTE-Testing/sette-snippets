@@ -23,8 +23,8 @@
 
 package hu.bme.mit.sette.snippets._3_objects;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._3_objects.dependencies.MyInterface;
 import hu.bme.mit.sette.snippets.inputs._3_objects.O3b_Interface_Inputs;
 

@@ -22,8 +22,8 @@
  */
 package hu.bme.mit.sette.snippets._1_basic.B3_loops;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets.inputs._1_basic.B3_loops.B3a_While_Inputs;
 
 @SetteSnippetContainer(category = "B3", goal = "Check support for the while looping statement",
@@ -228,11 +228,12 @@ public final class B3a_While {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int nestedLoopWithLabel(int x, int y) {
-        int i = 0, j = 0;
+        int i = 0, j;
         int sum = 0;
 
         outerLoop: while (i < x && i < 10) {
             if (x % 2 == 0) {
+                j = 0;
                 innerLoop: while (j < y && i < 10) {
                     if (y == 6) {
                         break innerLoop;

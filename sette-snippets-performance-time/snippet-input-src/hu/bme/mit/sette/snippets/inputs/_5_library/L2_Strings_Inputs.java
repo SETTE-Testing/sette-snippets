@@ -155,7 +155,7 @@ public final class L2_Strings_Inputs {
 
         inputs.addByParameters((Object) null);
         inputs.addByParameters("ab3456xy");
-        inputs.addByParameters("");
+        inputs.addByParameters("        ");
 
         return inputs;
     }

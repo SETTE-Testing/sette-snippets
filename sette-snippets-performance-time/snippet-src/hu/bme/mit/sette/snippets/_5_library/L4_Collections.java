@@ -23,13 +23,13 @@
 
 package hu.bme.mit.sette.snippets._5_library;
 
-import hu.bme.mit.sette.annotations.SetteRequiredStatementCoverage;
-import hu.bme.mit.sette.annotations.SetteSnippetContainer;
-import hu.bme.mit.sette.snippets.inputs._5_library.L4_Collections_Inputs;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
+
+import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
+import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
+import hu.bme.mit.sette.snippets.inputs._5_library.L4_Collections_Inputs;
 
 @SetteSnippetContainer(category = "L4", goal = "Check support for collections",
         inputFactoryContainer = L4_Collections_Inputs.class)

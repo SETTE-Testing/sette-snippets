@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._3_objects.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * The object type with method override used by the code snippets O4.
@@ -32,7 +32,7 @@ import hu.bme.mit.sette.annotations.SetteDependency;
 public class SimpleObjectOverride extends SimpleObject {
     @Override
     public void addAbs(int x) {
-        if (0 < x) {
+        if (0 > x) {
             x = 0;
         }
 

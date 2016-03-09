@@ -23,7 +23,7 @@
 
 package hu.bme.mit.sette.snippets._5_library.dependencies;
 
-import hu.bme.mit.sette.annotations.SetteDependency;
+import hu.bme.mit.sette.common.annotations.SetteDependency;
 
 /**
  * Simple class implementing the Number interface. This class can only represent between 1 to 10.
