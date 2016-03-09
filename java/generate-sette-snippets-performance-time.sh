@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script re-generates the sette-snippets-performance-time project
-set -e -x
+set -eu
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Regular expression
@@ -10,12 +10,6 @@ error () {
     echo $2
     echo ==================================================
     exit $1
-}
-
-function userConfirm () {
-    prompt=$1
-    read -r -p "$prompt [Y/n] " response
-    return $( [[ "${response,,}" =~ ^(yes|y| ) ]] )
 }
 
 FROM="sette-snippets"
@@ -48,7 +42,7 @@ done
 srcDirs=(snippet-src snippet-input-src)
 for src in "${srcDirs[@]}"; do
     find "$SCRIPT_DIR/$TO/$src" -type f -printf "%P\n" | grep -Ev "$SNIPPETS_TO_KEEP" | sort | while IFS= read -r f; do
-        if [[ $f && -e "$SCRIPT_DIR/$TO/$src/$f" ]]; then
+        if [[ "$f" && -e "$SCRIPT_DIR/$TO/$src/$f" ]]; then
             echo "Deleting $src/$f"
             rm -rf "$SCRIPT_DIR/$TO/$src/$f"
         fi
