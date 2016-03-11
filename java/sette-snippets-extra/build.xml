@@ -14,7 +14,7 @@
         <fileset dir="snippet-lib" includes="**/*.jar" erroronmissingdir="false" />
       </classpath>
       <src path="snippet-src" />
-      <src path="snippet-input-src" />
+      <!--<src path="snippet-input-src" />-->
     </javac>
   </target>
 
@@ -46,7 +46,7 @@
       <classpath>
         <classpathentry kind="output" path="bin" />
         <classpathentry kind="src" path="snippet-src" />
-        <classpathentry kind="src" path="snippet-input-src" />
+        <!--<classpathentry kind="src" path="snippet-input-src" />-->
         <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" />
         <classpathentry kind="src" path="/sette-common" />
       </classpath>
