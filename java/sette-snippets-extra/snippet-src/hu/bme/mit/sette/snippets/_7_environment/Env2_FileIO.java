@@ -8,7 +8,7 @@
  *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
  *
- * Copyright 2014-2015
+ * Copyright 2014-2016
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
  * in compliance with the License. You may obtain a copy of the License at
@@ -34,7 +34,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 
-@SetteSnippetContainer(category = "Env2", goal = "Check support for file I/O support")
+@SetteSnippetContainer(category = "Env2", goal = "Check support for file I/O")
 public final class Env2_FileIO {
     private Env2_FileIO() {
         throw new UnsupportedOperationException("Static class");

@@ -8,7 +8,7 @@
  *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
  *
- * Copyright 2014-2015
+ * Copyright 2014-2016
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
  * in compliance with the License. You may obtain a copy of the License at
@@ -23,10 +23,13 @@
 
 package hu.bme.mit.sette.snippets._7_environment;
 
+import java.util.Date;
+import java.util.Random;
+
 import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 
-@SetteSnippetContainer(category = "Env4", goal = "Check support for java.lang.System support")
+@SetteSnippetContainer(category = "Env4", goal = "Check support for system")
 public final class Env4_System {
     private Env4_System() {
         throw new UnsupportedOperationException("Static class");
@@ -43,7 +46,29 @@ public final class Env4_System {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int setsEnv() {
-        if ("test".equals(System.getenv("myEnv"))){
+        if ("test".equals(System.getenv("myEnv"))) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @SetteRequiredStatementCoverage(value = 100)
+    public static int manipulatesClock() {
+        Date d = new Date();
+
+        if (d.getTime() == 946684800000L) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @SetteRequiredStatementCoverage(value = 100)
+    public static int manipulatesRandom() {
+        Random r = new Random();
+
+        if (r.nextInt() == 12345) {
             return 1;
         } else {
             return 0;

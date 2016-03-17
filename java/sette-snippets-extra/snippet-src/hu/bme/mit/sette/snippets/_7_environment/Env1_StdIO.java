@@ -8,7 +8,7 @@
  *
  * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
  *
- * Copyright 2014-2015
+ * Copyright 2014-2016
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
  * in compliance with the License. You may obtain a copy of the License at
@@ -31,7 +31,7 @@ import java.util.Date;
 import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 
-@SetteSnippetContainer(category = "Env1", goal = "Check support for standard I/O support")
+@SetteSnippetContainer(category = "Env1", goal = "Check support for standard I/O")
 public final class Env1_StdIO {
     private Env1_StdIO() {
         throw new UnsupportedOperationException("Static class");
@@ -43,6 +43,7 @@ public final class Env1_StdIO {
         String line = in.readLine();
 
         if (line == null) {
+            // wrote EOF
             return 0;
         } else if (line.equals("Test")) {
             return 1;
