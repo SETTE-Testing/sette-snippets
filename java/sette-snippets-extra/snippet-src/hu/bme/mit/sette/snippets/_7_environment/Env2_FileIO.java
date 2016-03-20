@@ -36,6 +36,20 @@ import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 
 @SetteSnippetContainer(category = "Env2", goal = "Check support for file I/O")
 public final class Env2_FileIO {
+    private static final File tmpDirRoot;
+
+    static {
+        // Clean up and create root for tmp dirs
+        try {
+            tmpDirRoot = new File("tmp-snippet");
+            deleteIfExists(tmpDirRoot);
+            Files.createDirectories(tmpDirRoot.toPath());
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+
+    }
+
     private Env2_FileIO() {
         throw new UnsupportedOperationException("Static class");
     }
@@ -46,7 +60,7 @@ public final class Env2_FileIO {
             return -1;
         }
 
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("guessFilename");
         String fn = "test";
         fn += ".txt";
         File file = new File(tmpDir, fn);
@@ -66,7 +80,8 @@ public final class Env2_FileIO {
             return -1;
         }
 
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("guessFilenameAndContent");
+        System.out.println(tmpDir);
         String fn = "test";
         fn += ".txt";
         File file = new File(tmpDir, fn);
@@ -90,7 +105,7 @@ public final class Env2_FileIO {
             return -1;
         }
 
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("guessDirname");
         String dn = "te";
         dn += "st";
         File dir = new File(tmpDir, dn);
@@ -106,7 +121,7 @@ public final class Env2_FileIO {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int createFile() {
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("createFile");
         String fn = "test";
         fn += ".txt";
         File file = new File(tmpDir, fn);
@@ -120,7 +135,7 @@ public final class Env2_FileIO {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int createFileWithContent() throws IOException {
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("createFileWithContent");
         String fn = "test";
         fn += ".txt";
         File file = new File(tmpDir, fn);
@@ -138,7 +153,7 @@ public final class Env2_FileIO {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int createDir() {
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("createDir");
         String dn = "te";
         dn += "st";
         File dir = new File(tmpDir, dn);
@@ -152,7 +167,7 @@ public final class Env2_FileIO {
 
     @SetteRequiredStatementCoverage(value = 100)
     public static int createDirWithContent() {
-        File tmpDir = newTmpDir();
+        File tmpDir = getTmpDir("createDirWithContent");
         String dn = "te";
         dn += "st";
         File dir = new File(tmpDir, dn);
@@ -171,45 +186,44 @@ public final class Env2_FileIO {
     }
 
     /**
-     * Helper method to return create a new temporary directory. This method will also try to remove
-     * the directory during shutdown. Coverage for method is not measured.
+     * Helper method to return create a new temporary directory. Coverage for method is not
+     * measured.
      * 
-     * @return a new empty directory
+     * @return an existing tmp directory
      */
-    private static File newTmpDir() {
+    private static File getTmpDir(String name) {
         try {
-            Path tmpDir = Files.createTempDirectory("sette_tmp_");
-            Runtime.getRuntime().addShutdownHook(new Thread() {
-                @Override
-                public void run() {
-                    if (!Files.exists(tmpDir)) {
-                        return;
-                    }
-
-                    try {
-                        Files.walkFileTree(tmpDir, new SimpleFileVisitor<Path>() {
-                            @Override
-                            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
-                                    throws IOException {
-                                Files.delete(file);
-                                return FileVisitResult.CONTINUE;
-                            }
-
-                            @Override
-                            public FileVisitResult postVisitDirectory(Path dir, IOException exc)
-                                    throws IOException {
-                                Files.delete(dir);
-                                return FileVisitResult.CONTINUE;
-                            }
-                        });
-                    } catch (IOException ex) {
-                        throw new RuntimeException(ex);
-                    }
-                }
-            });
-            return tmpDir.toFile();
+            File tmpDir = new File(tmpDirRoot, name);
+            if (!tmpDir.exists()) {
+                Files.createDirectories(tmpDir.toPath());
+            }
+            return tmpDir;
         } catch (IOException ex) {
             throw new RuntimeException(ex);
+        }
+    }
+
+    private static void deleteIfExists(File file) throws IOException {
+        if (!file.exists()) {
+            return;
+        } else if (file.isFile()) {
+            Files.delete(file.toPath());
+        } else {
+            Files.walkFileTree(file.toPath(), new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path f, BasicFileAttributes attrs)
+                        throws IOException {
+                    Files.delete(f);
+                    return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path d, IOException exc)
+                        throws IOException {
+                    Files.delete(d);
+                    return FileVisitResult.CONTINUE;
+                }
+            });
         }
     }
 
