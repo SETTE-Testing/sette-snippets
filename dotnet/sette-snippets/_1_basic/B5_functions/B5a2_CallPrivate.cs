@@ -28,7 +28,7 @@ using System;
 
 namespace BME.MIT.SETTE.Basic.B5
 {
-    public static class B5a1_CallPrivate
+    public static class B5a2_CallPrivate
     {
         private static int calledFunction(int x, int y)
         {
