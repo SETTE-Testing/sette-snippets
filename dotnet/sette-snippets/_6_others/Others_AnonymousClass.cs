@@ -35,7 +35,7 @@ namespace BME.MIT.SETTE.Others
         // Anonymous class is a different concept in .NET, the Java anonymous class equivalent feature is delegate.
         public delegate int Method(int x);
 
-        public static int test(int x)
+        public static int anonymousClassTest(int x)
         {
             //AnonymousClassInterface a = new AnonymousClassInterface() {			
             //    public int method(int x) {

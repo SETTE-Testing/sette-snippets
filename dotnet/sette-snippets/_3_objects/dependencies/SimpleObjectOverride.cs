@@ -36,7 +36,7 @@ namespace BME.MIT.SETTE.Objects.Dependencies
     {
         public override void addAbs(int x)
         {
-            if (0 < x)
+            if (0 > x)
             {
                 x = 0;
             }

@@ -226,7 +226,7 @@ namespace BME.MIT.SETTE.Library
 
         public static bool logGuessBaseAndArgument(double x, double y)
         {
-            double l = Math.Log(y) / Math.Log(x) - 2;
+            double l = Math.Log(x) / Math.Log(y) - 2;
 
             if (-L1_Arithmetics.EPSILON < l && l < L1_Arithmetics.EPSILON)
             {

@@ -32,7 +32,7 @@ namespace BME.MIT.SETTE.Others
 {
     public static class Others_Varargs
     {
-        public static int guess(params int[] numbers)
+        public static int varargsGuess(params int[] numbers)
         {
             if (numbers == null || numbers.Length < 2)
             {
@@ -50,7 +50,7 @@ namespace BME.MIT.SETTE.Others
             }
         }
 
-        public static int guessWithLength(params int[] numbers)
+        public static int varargsGuessWithLength(params int[] numbers)
         {
             if (numbers == null)
             {
@@ -68,7 +68,7 @@ namespace BME.MIT.SETTE.Others
             }
         }
 
-        public static int[] iterateWithFor(params int[] numbers)
+        public static int[] varargsIterateWithFor(params int[] numbers)
         {
             if (numbers == null)
             {
@@ -94,7 +94,7 @@ namespace BME.MIT.SETTE.Others
             return numbers;
         }
 
-        public static int[] iterateWithForeach(params int[] numbers)
+        public static int[] varargsIterateWithForeach(params int[] numbers)
         {
             if (numbers == null)
             {

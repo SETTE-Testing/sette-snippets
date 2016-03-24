@@ -28,9 +28,10 @@ using System;
 
 namespace BME.MIT.SETTE.Basic.B5
 {
-    public static class B5a_CallPrivate
+    public static class B5a2_CallPublic
     {
-        private static int calledFunction(int x, int y)
+        //@SetteNotSnippet
+        public static int calledFunction(int x, int y)
         {
             if (x > 0 && y > 0)
             {
@@ -54,13 +55,13 @@ namespace BME.MIT.SETTE.Basic.B5
             }
         }
 
-        //@SetteIncludeCoverage(classes = { B5a_CallPrivate.class }, methods = { "calledFunction(int, int)" })
+        //@SetteIncludeCoverage(classes = { B5a_CallPublic.class }, methods = { "calledFunction(int, int)" })
         public static int simple(int x, int y)
         {
             return calledFunction(x, y);
         }
 
-        //@SetteIncludeCoverage(classes = { B5a_CallPrivate.class }, methods = { "calledFunction(int, int)" })
+        //@SetteIncludeCoverage(classes = { B5a_CallPublic.class }, methods = { "calledFunction(int, int)" })
         public static int useReturnValue(int x, int y)
         {
             if (calledFunction(x, y) >= 0)
@@ -73,7 +74,7 @@ namespace BME.MIT.SETTE.Basic.B5
             }
         }
 
-        //@SetteIncludeCoverage(classes = { B5a_CallPrivate.class }, methods = { "calledFunction(int, int)" })
+        //@SetteIncludeCoverage(classes = { B5a_CallPublic.class }, methods = { "calledFunction(int, int)" })
         public static int conditionalCall(int x, int y, bool z)
         {
             if (z)

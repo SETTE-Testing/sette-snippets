@@ -256,13 +256,14 @@ namespace BME.MIT.SETTE.Basic.B3
         public static int nestedLoopWithLabel(int x, int y)
         {
             // in C#.NET it is not allowed to break to a label, use goto instead
-            int i = 0, j = 0;
+            int i = 0, j;
             int sum = 0;
 
             do
             {
                 if (x % 2 == 0)
                 {
+                    j = 0;
                     do
                     {
                         if (y == 6)

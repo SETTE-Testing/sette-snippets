@@ -1,4 +1,3 @@
-
 /*
  * SETTE - Symbolic Execution based Test Tool Evaluator
  * 
@@ -36,7 +35,7 @@ namespace BME.MIT.SETTE.Basic.B4
      * Unsafe arrays: not ensuring safe operations, i.e. IndexOutOfBoundsException
      * and NullPointerException may occur.
      */
-    public static class B4_UnsafeArrays
+    public static class B4a_SafeArrays
     {
         public static int fromParams(int x, int y, int z)
         {
@@ -54,6 +53,12 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int indexParam(int index)
         {
+            if (index < 0 || 10 <= index)
+            {
+                // make safe
+                return -1;
+            }
+
             int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             if (numbers[index] == 5)
@@ -82,6 +87,12 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int fromParamsWithIndex(int x, int y, int z, int index)
         {
+            if (index < 0 || 3 <= index)
+            {
+                // make safe
+                return -1;
+            }
+
             int[] numbers = new int[] { x, y, z };
 
             if (numbers[0] == 1 && numbers[1] == 2 && numbers[index] == 3)
@@ -96,6 +107,12 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int guessOneArray(int[] numbers)
         {
+            if (numbers == null || numbers.Length < 2)
+            {
+                // make safe
+                return -1;
+            }
+
             if (numbers[0] == 1 && numbers[1] == 2)
             {
                 return 1;
@@ -108,6 +125,12 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int guessOneArrayWithLength(int[] numbers)
         {
+            if (numbers == null)
+            {
+                // make safe
+                return -1;
+            }
+
             if (numbers.Length == 3 && numbers[0] == 1 && numbers[1] == 2)
             {
                 return 1;
@@ -120,6 +143,13 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int twoArrays(int[] numbers1, int[] numbers2)
         {
+            if (numbers1 == null || numbers2 == null || numbers1.Length < 1
+                    || numbers2.Length < 2)
+            {
+                // make safe
+                return -1;
+            }
+
             if (numbers1[0] + numbers2[0] == 1)
             {
                 if (numbers2[1] == 2)
@@ -139,7 +169,12 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int[] iterateWithFor(int[] numbers)
         {
-            if (numbers.Length > 3)
+            if (numbers == null)
+            {
+                // make safe
+                return new int[0];
+            }
+            else if (numbers.Length > 3)
             {
                 // prevent path explosion
                 return new int[0];
@@ -160,7 +195,12 @@ namespace BME.MIT.SETTE.Basic.B4
 
         public static int[] iterateWithForeach(int[] numbers)
         {
-            if (numbers.Length > 3)
+            if (numbers == null)
+            {
+                // make safe
+                return new int[0];
+            }
+            else if (numbers.Length > 3)
             {
                 // prevent path explosion
                 return new int[0];

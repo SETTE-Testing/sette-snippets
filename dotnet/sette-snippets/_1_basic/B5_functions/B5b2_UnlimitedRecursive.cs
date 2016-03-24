@@ -28,44 +28,22 @@ using System;
 
 namespace BME.MIT.SETTE.Basic.B5
 {
-    public static class B5b_LimitedRecursive
+    public static class B5b2_UnlimitedRecursive
     {
-        //@SetteIncludeCoverage(classes = { B5b_LimitedRecursive.class }, methods = { "simple_(int, int)" })
         public static int simple(int x)
         {
-            return simple_(x, 1);
-        }
-
-        private static int simple_(int x, int depth)
-        {
-            if (depth > 10)
-            {
-                return -1;
-            }
-
             if (x % 100 == 0)
             {
                 return x;
             }
             else
             {
-                return simple_(x - 1, depth + 1);
+                return simple(x - 1);
             }
         }
 
-        //@SetteIncludeCoverage(classes = { B5b_LimitedRecursive.class }, methods = { "fibonacci_(int, int)" })
         public static int fibonacci(int x)
         {
-            return fibonacci_(x, 1);
-        }
-
-        private static int fibonacci_(int x, int depth)
-        {
-            if (depth > 10)
-            {
-                return 0;
-            }
-
             if (x <= 0)
             {
                 return 0;
@@ -76,8 +54,7 @@ namespace BME.MIT.SETTE.Basic.B5
             }
             else
             {
-                return fibonacci_(x - 1, depth + 1)
-                        + fibonacci_(x - 2, depth + 2);
+                return fibonacci(x - 1) + fibonacci(x - 2);
             }
         }
     }

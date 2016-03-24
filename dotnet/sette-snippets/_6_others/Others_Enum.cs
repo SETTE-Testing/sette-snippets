@@ -33,7 +33,7 @@ namespace BME.MIT.SETTE.Others
     public static class Others_Enum
     {
         //@SetteRequiredStatementCoverage(value = 83)
-        public static int guessEnum(State s)
+        public static int enumGuess(State s)
         {
             if (s == State.STARTED)
             {
@@ -59,7 +59,7 @@ namespace BME.MIT.SETTE.Others
         }
 
         //@SetteRequiredStatementCoverage(value = 80)
-        public static int guessEnumString(State s)
+        public static int enumGuessString(State s)
         {
             if (s.ToString().Equals("STARTED"))
             {
@@ -85,7 +85,7 @@ namespace BME.MIT.SETTE.Others
         }
 
         //@SetteRequiredStatementCoverage(value = 80)
-        public static int guessEnumOrdinal(State s)
+        public static int enumGuessOrdinal(State s)
         {
 
             if ((int)s == 0)
@@ -112,7 +112,7 @@ namespace BME.MIT.SETTE.Others
         }
 
         //@SetteRequiredStatementCoverage(value = 84)
-        public static int switchEnum(State s)
+        public static int enumSwitch(State s)
         {
             switch (s)
             {

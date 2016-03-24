@@ -33,7 +33,7 @@ namespace BME.MIT.SETTE.Others
 {
     public static class Others_ThirdParty
     {
-        public static bool minMax(int a, int b)
+        public static bool thirdPartyMinMax(int a, int b)
         {
             if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 20)
             {
@@ -45,7 +45,7 @@ namespace BME.MIT.SETTE.Others
             }
         }
 
-        public static bool minMaxWithOrder(int a, int b)
+        public static bool thirdPartyMinMaxWithOrder(int a, int b)
         {
             if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 20 && a < b)
             {
@@ -58,7 +58,7 @@ namespace BME.MIT.SETTE.Others
         }
 
         //@SetteRequiredStatementCoverage(value = 50)
-        public static bool minMaxImpossible(int a, int b)
+        public static bool thirdPartyMinMaxImpossible(int a, int b)
         {
             if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 10
                     && Math.Max(a, b) == 20)
