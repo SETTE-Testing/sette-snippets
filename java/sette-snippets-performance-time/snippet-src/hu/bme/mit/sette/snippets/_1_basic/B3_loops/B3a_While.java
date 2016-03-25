@@ -136,7 +136,7 @@ public final class B3a_While {
      *            When this number is reached the loop immediately stops
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 78)
+    @SetteRequiredStatementCoverage(value = 94.12)
     public static int complex(int x, int limit, int skip, int stop) {
         int i = 1;
         int sum = 0;

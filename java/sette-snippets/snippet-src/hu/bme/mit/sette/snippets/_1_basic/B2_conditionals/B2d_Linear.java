@@ -57,7 +57,7 @@ public final class B2d_Linear {
      * @param x
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean oneParamIntNoSolution(int x) {
         if (20 * x + 2 == 17) {
             // impossible
@@ -105,7 +105,7 @@ public final class B2d_Linear {
      * @param y
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 66)
+    @SetteRequiredStatementCoverage(value = 80)
     public static boolean twoParamsIntNoSolution(int x, int y) {
         // it is usual that the results are saved into variables and the
         // variables are used in conditional statements
@@ -164,7 +164,7 @@ public final class B2d_Linear {
      * @param z
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 71)
+    @SetteRequiredStatementCoverage(value = 83.33)
     public static boolean threeParamsIntNoSolution(int x, int y, int z) {
         // it is usual that the results are saved into variables and the
         // variables are used in conditional statements

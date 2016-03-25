@@ -34,7 +34,7 @@ public final class G1_Functions {
         throw new UnsupportedOperationException("Static class");
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 88.89)
     public static <T> int guessType(T o) {
         if (o == null) {
             return 0;
@@ -50,7 +50,7 @@ public final class G1_Functions {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 88)
+    @SetteRequiredStatementCoverage(value = 93.33)
     public static <T> int guessTypeAndUse(T o) {
         if (o == null) {
             return 0;
@@ -78,7 +78,7 @@ public final class G1_Functions {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 60)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static <T extends Number> int guessTypeWithExtends(T o) {
         if (o == null) {
             return 0;
@@ -95,7 +95,7 @@ public final class G1_Functions {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 77)
+    @SetteRequiredStatementCoverage(value = 80)
     public static <T extends Number> int guessTypeWithExtendsAndUse(T o) {
         if (o == null) {
             return 0;

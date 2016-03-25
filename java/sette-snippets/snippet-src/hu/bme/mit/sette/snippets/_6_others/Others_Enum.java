@@ -35,7 +35,7 @@ public final class Others_Enum {
         throw new UnsupportedOperationException("Static class");
     }
 
-    @SetteRequiredStatementCoverage(value = 83)
+    @SetteRequiredStatementCoverage(value = 90.91)
     public static int enumGuess(State s) {
         if (s == null) {
             return -1;
@@ -53,7 +53,7 @@ public final class Others_Enum {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 90.91)
     public static int enumGuessString(State s) {
         if (s == null) {
             return -1;
@@ -71,7 +71,7 @@ public final class Others_Enum {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 90.91)
     public static int enumGuessOrdinal(State s) {
         if (s == null) {
             return -1;
@@ -89,7 +89,7 @@ public final class Others_Enum {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 84)
+    @SetteRequiredStatementCoverage(value = 87.50)
     public static int enumSwitch(State s) {
         if (s == null) {
             return -1;

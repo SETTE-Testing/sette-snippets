@@ -125,7 +125,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 90)
+    @SetteRequiredStatementCoverage(value = 91.67)
     @SetteIncludeCoverage(classes = { SimpleObject.class }, methods = { "addAbs(int)" })
     public static int guessImpossibleResultParams(int x1, int x2, int x3) {
         SimpleObject obj = new SimpleObject();
@@ -142,7 +142,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 90)
+    @SetteRequiredStatementCoverage(value = 92.31)
     @SetteIncludeCoverage(classes = { SimpleObject.class }, methods = { "addAbs(int)" })
     public static int guessImpossibleResult(SimpleObject obj, int x1, int x2, int x3) {
         if (obj == null) {
@@ -193,7 +193,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83)
+    @SetteRequiredStatementCoverage(value = 83.33)
     public static int guessImpossibleOperationCountParams(int oc) {
         SimpleObject obj = new SimpleObject();
 
@@ -209,7 +209,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 85)
+    @SetteRequiredStatementCoverage(value = 85.71)
     public static int guessImpossibleOperationCount(SimpleObject obj, int oc) {
         if (obj == null) {
             return -1;
@@ -259,7 +259,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 75)
+    @SetteRequiredStatementCoverage(value = 83.33)
     public static int guessImpossibleResultAndOperationCountParams(int x, int oc) {
         SimpleObject obj = new SimpleObject();
 
@@ -275,7 +275,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 85.71)
     public static int guessImpossibleResultAndOperationCount(SimpleObject obj, int x, int oc) {
         if (obj == null) {
             return -1;
@@ -306,7 +306,7 @@ public final class O1_Simple {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 66)
+    @SetteRequiredStatementCoverage(value = 80)
     public static int guessImpossibleObject(SimpleObject obj) {
         if (obj == null) {
             return -1;

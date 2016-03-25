@@ -45,7 +45,7 @@ public final class L1_Arithmetics {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean absImpossible(int x, int y) {
         if (Math.abs(x) == -5 || Math.abs(y) == -10) {
             // impossible
@@ -73,7 +73,7 @@ public final class L1_Arithmetics {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean minMaxImpossible(int a, int b) {
         if (Math.min(a, b) == -10 && Math.max(a, b) == 10 && Math.max(a, b) == 20) {
             // impossible
@@ -94,7 +94,7 @@ public final class L1_Arithmetics {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean sqrtImpossible(double x) {
         if (Math.sqrt(x) == -1) {
             // impossible
@@ -203,7 +203,7 @@ public final class L1_Arithmetics {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean sinImpossible(double x) {
         if (Math.sin(x) == 2) {
             // impossible
@@ -224,7 +224,7 @@ public final class L1_Arithmetics {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean cosImpossible(double x) {
         if (Math.cos(x) == 2) {
             // impossible

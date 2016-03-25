@@ -53,7 +53,7 @@ public final class Others_ThirdParty {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 50)
+    @SetteRequiredStatementCoverage(value = 66.67)
     public static boolean thirdPartyMinMaxImpossible(int a, int b) {
         if (MyMath.min(a, b) == -10 && MyMath.max(a, b) == 10 && Math.max(a, b) == 20) {
             // impossible

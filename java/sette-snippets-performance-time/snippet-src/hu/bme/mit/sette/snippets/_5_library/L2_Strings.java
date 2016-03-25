@@ -34,7 +34,7 @@ public final class L2_Strings {
         throw new UnsupportedOperationException("Static class");
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 88.89)
     public static int equality(String s) {
         if (s == null) {
             return -1;
@@ -50,7 +50,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 88.89)
     public static int equalityIgnoreCase(String s) {
         if (s == null) {
             return -1;
@@ -79,7 +79,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83)
+    @SetteRequiredStatementCoverage(value = 92.31)
     public static int addWithCondition(String a, String b) {
         if (a == null && b == null) {
             return 0;
@@ -99,7 +99,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 75)
+    @SetteRequiredStatementCoverage(value = 85.71)
     public static int length(String s) {
         if (s == null) {
             return -1;
@@ -113,7 +113,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 75)
+    @SetteRequiredStatementCoverage(value = 85.71)
     public static int charAt(String s) {
         if (s == null) {
             return -1;
@@ -142,7 +142,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 88.89)
     public static int compareTo(String s) {
         if (s == null) {
             return -1;
@@ -158,7 +158,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 88.89)
     public static int compareToIgnoreCase(String s) {
         if (s == null) {
             return -1;
@@ -189,7 +189,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 75)
+    @SetteRequiredStatementCoverage(value = 87.50)
     public static int indexOf(String s) {
         if (s == null) {
             return -1;
@@ -204,7 +204,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 75)
+    @SetteRequiredStatementCoverage(value = 85.71)
     public static int substring(String s) {
         if (s == null) {
             return -1;

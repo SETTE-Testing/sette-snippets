@@ -42,7 +42,7 @@ public final class LO_Other {
         throw new UnsupportedOperationException("Static class");
     }
 
-    @SetteRequiredStatementCoverage(value = 71)
+    @SetteRequiredStatementCoverage(value = 83.33)
     public static int inheritsAPIGuessOnePrimitive(int x) {
         FingerNumber a = new FingerNumber(x);
 
@@ -56,7 +56,7 @@ public final class LO_Other {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 75)
+    @SetteRequiredStatementCoverage(value = 85.71)
     public static int inheritsAPIGuessOneObject(FingerNumber a) {
         if (a == null) {
             return -1;
@@ -70,7 +70,7 @@ public final class LO_Other {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 84)
+    @SetteRequiredStatementCoverage(value = 91.67)
     @SetteIncludeCoverage(classes = { FingerNumber.class },
             methods = { "add(hu.bme.mit.sette.snippets._5_library.dependencies.FingerNumber)" })
     public static int inheritsAPIGuessTwoPrimitives(int x, int y) {
@@ -89,7 +89,7 @@ public final class LO_Other {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 84)
+    @SetteRequiredStatementCoverage(value = 91.67)
     @SetteIncludeCoverage(classes = { FingerNumber.class },
             methods = { "add(hu.bme.mit.sette.snippets._5_library.dependencies.FingerNumber)" })
     public static int inheritsAPIGuessTwoObjects(FingerNumber a, FingerNumber b) {
