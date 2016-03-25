@@ -47,7 +47,6 @@ public final class Env2_FileIO {
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
-
     }
 
     private Env2_FileIO() {
