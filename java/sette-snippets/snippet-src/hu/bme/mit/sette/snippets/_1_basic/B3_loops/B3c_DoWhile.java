@@ -136,7 +136,7 @@ public final class B3c_DoWhile {
      *            When this number is reached the loop immediately stops
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 94.12)
+    @SetteRequiredStatementCoverage(value = 78)
     public static int complex(int x, int limit, int skip, int stop) {
         int i = 1;
         int sum = 0;

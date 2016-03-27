@@ -50,7 +50,7 @@ public final class O3c_Abstract {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83.33)
+    @SetteRequiredStatementCoverage(value = 71)
     public static int validate(MyAbstract obj, int v) {
         if (obj == null) {
             return -1;
@@ -66,7 +66,7 @@ public final class O3c_Abstract {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83.33)
+    @SetteRequiredStatementCoverage(value = 71)
     public static int guessImpossible(MyAbstract obj, int v) {
         if (obj == null) {
             return -1;

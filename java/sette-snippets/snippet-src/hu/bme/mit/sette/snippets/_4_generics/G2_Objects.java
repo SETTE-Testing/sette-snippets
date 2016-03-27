@@ -55,7 +55,7 @@ public final class G2_Objects {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 66.67)
+    @SetteRequiredStatementCoverage(value = 50)
     public static boolean guessImpossible(GenericTriplet<Double> obj) {
         if (obj.get(0).equals(new Object())) {
             // impossible branch
@@ -74,7 +74,7 @@ public final class G2_Objects {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 66.67)
+    @SetteRequiredStatementCoverage(value = 50)
     public static boolean guessSafe(SafeGenericTriplet<?> obj) {
         if (obj.get(4) != null) {
             // impossible branch
@@ -84,7 +84,7 @@ public final class G2_Objects {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 66.67)
+    @SetteRequiredStatementCoverage(value = 50)
     public static boolean guessSafeNoHelp(GenericTriplet<?> obj) {
         if (obj.get(4) != null) {
             // impossible branch

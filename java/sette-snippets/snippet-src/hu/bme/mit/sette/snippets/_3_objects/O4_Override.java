@@ -37,7 +37,7 @@ public final class O4_Override {
         throw new UnsupportedOperationException("Static class");
     }
 
-    @SetteRequiredStatementCoverage(value = 100)
+    @SetteRequiredStatementCoverage(value = 90)
     @SetteIncludeCoverage(classes = { SimpleObject.class, SimpleObjectOverride.class },
             methods = { "addAbs(int)", "addAbs(int)" })
     public static int guessResultParams(int x1, int x2, int x3) {
@@ -54,7 +54,7 @@ public final class O4_Override {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 100)
+    @SetteRequiredStatementCoverage(value = 95)
     @SetteIncludeCoverage(classes = { SimpleObject.class, SimpleObjectOverride.class },
             methods = { "addAbs(int)", "addAbs(int)" })
     public static int guessResult(SimpleObjectOverride obj, int x1, int x2, int x3) {
@@ -73,7 +73,7 @@ public final class O4_Override {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 93.75)
+    @SetteRequiredStatementCoverage(value = 85)
     @SetteIncludeCoverage(classes = { SimpleObject.class, SimpleObjectOverride.class },
             methods = { "addAbs(int)", "addAbs(int)" })
     public static int guessImpossibleParams(int x1, int x2, int x3) {
@@ -91,7 +91,7 @@ public final class O4_Override {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 94.12)
+    @SetteRequiredStatementCoverage(value = 90)
     @SetteIncludeCoverage(classes = { SimpleObject.class, SimpleObjectOverride.class },
             methods = { "addAbs(int)", "addAbs(int)" })
     public static int guessImpossible(SimpleObjectOverride obj, int x1, int x2, int x3) {

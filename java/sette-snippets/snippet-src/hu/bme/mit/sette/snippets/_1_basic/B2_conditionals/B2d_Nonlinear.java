@@ -62,7 +62,7 @@ public final class B2d_Nonlinear {
      * @param x2
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 66)
     public static boolean quadraticIntNoSolution(int x1, int x2) {
         int e1 = 2 * x1 * x1 + 3 * x1 - 10;
         int e2 = 2 * x2 * x2 + 3 * x2 - 10;
@@ -108,7 +108,7 @@ public final class B2d_Nonlinear {
      * @param x2
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 66)
     public static boolean quadraticFloatNoSolution(float x1, float x2) {
         float e1 = 2 * x1 * x1 + 3 * x1 + 10;
         float e2 = 2 * x2 * x2 + 3 * x2 + 10;
@@ -154,7 +154,7 @@ public final class B2d_Nonlinear {
      * @param x2
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 80)
+    @SetteRequiredStatementCoverage(value = 66)
     public static boolean quadraticDoubleNoSolution(double x1, double x2) {
         double e1 = 2 * x1 * x1 + 3 * x1 + 10;
         double e2 = 2 * x2 * x2 + 3 * x2 + 10;

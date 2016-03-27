@@ -125,7 +125,7 @@ public final class B3b_For {
      *            When this number is reached the loop immediately stops
      * @return
      */
-    @SetteRequiredStatementCoverage(value = 92.86)
+    @SetteRequiredStatementCoverage(value = 75)
     public static int complex(int x, int limit, int skip, int stop) {
         int sum = 0;
 

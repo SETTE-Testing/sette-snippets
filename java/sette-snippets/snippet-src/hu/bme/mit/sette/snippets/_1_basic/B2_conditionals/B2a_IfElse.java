@@ -43,7 +43,7 @@ public final class B2a_IfElse {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 72.73)
+    @SetteRequiredStatementCoverage(value = 8.0 / 12.0 * 100)
     public static int twoParamsBoolean(boolean x, boolean y) {
         if (x && y) {
             return 1;
@@ -77,7 +77,7 @@ public final class B2a_IfElse {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 84.62)
+    @SetteRequiredStatementCoverage(value = 8.0 / 12.0 * 100)
     public static int twoParamsInt(int x, int y) {
         if (x > 0 && y > 0) {
             return 1;
@@ -111,7 +111,7 @@ public final class B2a_IfElse {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 84.62)
+    @SetteRequiredStatementCoverage(value = 8.0 / 12.0 * 100)
     public static int twoParamsDouble(double x, double y) {
         if (x > 0 && y > 0) {
             return 1;

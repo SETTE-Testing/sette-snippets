@@ -50,7 +50,7 @@ public final class O3b_Interface {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83.33)
+    @SetteRequiredStatementCoverage(value = 71)
     public static int validate(MyInterface obj, int v) {
         if (obj == null) {
             return -1;
@@ -66,7 +66,7 @@ public final class O3b_Interface {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83.33)
+    @SetteRequiredStatementCoverage(value = 71)
     public static int guessImpossible(MyInterface obj, int v) {
         if (obj == null) {
             return -1;
