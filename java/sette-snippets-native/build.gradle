@@ -1,0 +1,110 @@
+/*
+ * SETTE - Symbolic Execution based Test Tool Evaluator
+ *
+ * SETTE is a tool to help the evaluation and comparison of symbolic execution based test input 
+ * generator tools.
+ *
+ * Budapest University of Technology and Economics (BME)
+ *
+ * Authors: Lajos Cseppentő <lajos.cseppento@inf.mit.bme.hu>, Zoltán Micskei <micskeiz@mit.bme.hu>
+ *
+ * Copyright 2014-2016
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except 
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the 
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+ * express or implied. See the License for the specific language governing permissions and 
+ * limitations under the License.
+ */
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+project.group = 'hu.bme.mit.sette'
+project.archivesBaseName = project.name
+project.version = null
+project.sourceCompatibility = 1.8
+project.targetCompatibility = 1.8
+project.buildDir = 'build-gradle'
+
+boolean isWindows = System.getProperty('os.name').toLowerCase().startsWith('win')
+String pathToVc = 'C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC'
+
+String setteCommonJarDirPath = '../../../sette-tool/src/sette-common/build/libs'
+File setteCommonJar = file(setteCommonJarDirPath).listFiles().find {
+    it.name.startsWith('sette-common') && it.name.endsWith('.jar')
+}
+
+dependencies {
+    compile files(setteCommonJarDirPath + '/' + setteCommonJar.name)
+}
+
+tasks.eclipse.dependsOn tasks.cleanEclipse
+tasks.idea.dependsOn tasks.cleanIdea
+
+sourceSets.main.java {
+    srcDirs = ['snippet-src', 'snippet-input-src']
+}
+
+// JNI tutorial: https://blogs.oracle.com/moonocean/entry/a_simple_example_of_jni
+task javah(type: Exec, dependsOn: classes) {
+    commandLine 'javah', '-jni', '-d', 'snippet-src-native',
+            '-cp', sourceSets.main.output.classesDir,
+            'hu.bme.mit.sette.snippets._10_native.dependencies.NativeFunction',
+            'hu.bme.mit.sette.snippets._10_native.dependencies.NativeObject'
+}
+
+task compileNative(type: Exec, dependsOn: javah) {
+    // Compile for x64 - this will only work with 64-bit JVM
+    if (isWindows) {
+        commandLine "$pathToVc/vcvarsall.bat", 'amd64', '&&', "$pathToVc/bin/amd64/cl.exe",
+                'snippet-src-native/hu_bme_mit_sette_snippets__10_native_dependencies_NativeFunctionImpl.c',
+                'snippet-src-native/hu_bme_mit_sette_snippets__10_native_dependencies_NativeObjectImpl.c',
+                '/MD', '/LD',
+                "/I${System.getenv('JAVA_HOME')}/include",
+                "/I${System.getenv('JAVA_HOME')}/include/win32",
+                "/Fe$buildDir/libs/N10.dll", "/Fo$buildDir/win32/"
+    } else {
+        commandLine 'gcc', '-shared', '-fpic',
+                '-o', "$buildDir/libs/libN10.so", // lib prefix on Linux
+                "-I${System.getenv('JAVA_HOME')}/include",
+                "-I${System.getenv('JAVA_HOME')}/include/linux",
+                'snippet-src-native/hu_bme_mit_sette_snippets__10_native_dependencies_NativeFunctionImpl.c',
+                'snippet-src-native/hu_bme_mit_sette_snippets__10_native_dependencies_NativeObjectImpl.c'
+    }
+
+    doFirst {
+        file("$buildDir/libs").mkdirs()
+        if (isWindows) {
+            file("$buildDir/win32").mkdirs()
+        }
+    }
+}
+// run: java -Djava.library.path=...
+
+task cleanBuildForSette(type: Delete) { delete 'build' }
+
+task copyBuildForSette(type: Copy, dependsOn: [cleanBuildForSette, classes]) {
+    from(sourceSets.main.output.classesDir) { include '**/*' } into 'build'
+}
+
+task copyNativeLibForSette(type: Copy, dependsOn: compileNative) {
+    from("$buildDir/libs") {
+        include '**/*.dll'
+        include '**/*.so'
+    } into 'snippet-lib'
+}
+
+tasks.clean.dependsOn cleanBuildForSette
+tasks.assemble.dependsOn copyBuildForSette
+tasks.assemble.dependsOn copyNativeLibForSette
+
+task wrapper(type: Wrapper) {
+    group = 'Build Setup'
+    description = 'Generates Gradle 2.11 wrapper files.'
+    gradleVersion = '2.11'
+}
