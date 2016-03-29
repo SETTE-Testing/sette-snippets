@@ -91,15 +91,12 @@ public final class N10_Native {
             String[] dirs = System.getProperty("java.library.path").split(File.pathSeparator);
             for (String dir : dirs) {
                 lib = new File(dir, pathToLib);
-                System.out.println(lib);
                 if (lib.exists()) {
                     loadNativeLibraryTmpCopy(lib);
-                    System.out.println("LOADED");
                     return;
                 }
             }
 
-            System.out.println("LOddADED");
             throw new RuntimeException("Cannot load " + pathToLib);
         }
     }
