@@ -130,7 +130,7 @@ public final class T3_Indeterminacy {
     public static int starvation() {
         data = 0;
 
-        Storage storage = new Storage();
+        final Storage storage = new Storage();
 
         Thread producer = new Thread() {
             @Override

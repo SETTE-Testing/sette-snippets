@@ -39,7 +39,11 @@ public final class R1b_ClassWithLoading {
     private static Class<?> loadClass(String className) {
         try {
             return Class.forName(className);
-        } catch (ClassNotFoundException | NullPointerException | IllegalArgumentException ex) {
+        } catch (ClassNotFoundException ex) {
+            return null;
+        } catch (NullPointerException ex) {
+            return null;
+        } catch (IllegalArgumentException ex) {
             return null;
         }
     }

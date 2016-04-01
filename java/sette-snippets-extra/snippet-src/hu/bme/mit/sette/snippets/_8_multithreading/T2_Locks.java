@@ -54,8 +54,8 @@ public final class T2_Locks {
     @SetteRequiredStatementCoverage(100)
     public static int signalAwait(final int x) {
         success = false;
-        Lock lock = new ReentrantLock();
-        Condition canProceed = lock.newCondition();
+        final Lock lock = new ReentrantLock();
+        final Condition canProceed = lock.newCondition();
 
         Thread t1 = new Thread() {
             @Override

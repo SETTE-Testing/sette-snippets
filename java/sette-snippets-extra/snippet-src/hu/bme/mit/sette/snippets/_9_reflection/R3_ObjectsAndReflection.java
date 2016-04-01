@@ -22,7 +22,6 @@
  */
 package hu.bme.mit.sette.snippets._9_reflection;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import hu.bme.mit.sette.common.annotations.SetteIncludeCoverage;
@@ -98,8 +97,7 @@ public final class R3_ObjectsAndReflection {
                 m = o.getClass().getMethod(methodName, int.class);
                 m.invoke(o, v);
                 return 1;
-            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException
-                    | NullPointerException | IllegalArgumentException ex) {
+            } catch (Exception ex) {
                 return 2;
             }
         } else {
@@ -121,7 +119,7 @@ public final class R3_ObjectsAndReflection {
             } else {
                 return 0;
             }
-        } catch (InstantiationException | IllegalAccessException ex) {
+        } catch (Exception ex) {
             return -2;
         }
     }

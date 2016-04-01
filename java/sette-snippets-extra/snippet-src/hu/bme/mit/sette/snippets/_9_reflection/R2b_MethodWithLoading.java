@@ -51,7 +51,11 @@ public final class R2b_MethodWithLoading {
             }
 
             return m;
-        } catch (ClassNotFoundException | NullPointerException | IllegalArgumentException ex) {
+        } catch (ClassNotFoundException ex) {
+            return null;
+        } catch (NullPointerException ex) {
+            return null;
+        } catch (IllegalArgumentException ex) {
             return null;
         }
     }

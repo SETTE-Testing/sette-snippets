@@ -53,7 +53,7 @@ public final class T1_Threads {
     }
 
     @SetteRequiredStatementCoverage(100)
-    public static int canStartEnoughThreads(int maxDepth) {
+    public static int canStartEnoughThreads(final int maxDepth) {
         Thread t = new Thread() {
             @Override
             public void run() {
@@ -73,7 +73,7 @@ public final class T1_Threads {
         return 0;
     }
 
-    private static void forkBomb(int depth, int maxDepth) {
+    private static void forkBomb(final int depth, final int maxDepth) {
         if (depth > maxDepth) {
             return;
         }
