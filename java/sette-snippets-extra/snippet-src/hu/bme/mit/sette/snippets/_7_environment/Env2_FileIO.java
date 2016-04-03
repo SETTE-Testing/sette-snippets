@@ -80,7 +80,7 @@ public final class Env2_FileIO {
         }
 
         File tmpDir = getTmpDir("guessFilenameAndContent");
-        System.out.println(tmpDir);
+        System.out.println(tmpDir); // TODO remove in the future
         String fn = "test";
         fn += ".txt";
         File file = new File(tmpDir, fn);

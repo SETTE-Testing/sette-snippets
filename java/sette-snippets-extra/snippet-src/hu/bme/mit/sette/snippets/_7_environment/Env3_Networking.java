@@ -184,7 +184,7 @@ public final class Env3_Networking {
     @SetteRequiredStatementCoverage(value = 0)
     public static int deadlock() throws IOException {
         // server will not send anything if it does not receive anything
-        // the test input generator should detect the deadlock  
+        // the test input generator should detect the deadlock
         Server server = new Server();
         server.startServer();
 
@@ -233,6 +233,8 @@ public final class Env3_Networking {
             } catch (IOException ex) {
                 if (!ex.getMessage().equals("Socket is closed")
                         && !ex.getMessage().equals("socket closed")) {
+                    // TODO filter out exception Address already in use: JVM_Bind
+                    // (tool trying with port already used by the OS)
                     throw new RuntimeException(ex);
                 }
             } finally {
