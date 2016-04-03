@@ -31,7 +31,9 @@ import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._8_multithreading.dependencies.ThreadUtils;
 
-@SetteSnippetContainer(category = "T2", goal = "Check support for locks")
+// fork is needed because threads are used
+@SetteSnippetContainer(category = "T2", goal = "Check support for locks",
+        forkDuringEvaluation = true)
 public final class T2_Locks {
     private T2_Locks() {
         throw new UnsupportedOperationException("Static class");

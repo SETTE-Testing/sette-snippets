@@ -26,7 +26,9 @@ import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 import hu.bme.mit.sette.snippets._8_multithreading.dependencies.ThreadUtils;
 
-@SetteSnippetContainer(category = "T1", goal = "Check support for threads")
+// fork is needed because threads are used
+@SetteSnippetContainer(category = "T1", goal = "Check support for threads",
+        forkDuringEvaluation = true)
 public final class T1_Threads {
     private T1_Threads() {
         throw new UnsupportedOperationException("Static class");

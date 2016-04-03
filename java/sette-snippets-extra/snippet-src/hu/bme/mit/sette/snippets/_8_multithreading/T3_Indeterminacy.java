@@ -29,8 +29,10 @@ import hu.bme.mit.sette.snippets._8_multithreading.dependencies.SharedResourceUs
 import hu.bme.mit.sette.snippets._8_multithreading.dependencies.Storage;
 import hu.bme.mit.sette.snippets._8_multithreading.dependencies.ThreadUtils;
 
+// fork is needed because threads are used
 @SetteSnippetContainer(category = "T3",
-        goal = "Check support for thread timing and handling indeterministic codes")
+        goal = "Check support for thread timing and handling indeterministic codes",
+        forkDuringEvaluation = true)
 public final class T3_Indeterminacy {
     private T3_Indeterminacy() {
         throw new UnsupportedOperationException("Static class");

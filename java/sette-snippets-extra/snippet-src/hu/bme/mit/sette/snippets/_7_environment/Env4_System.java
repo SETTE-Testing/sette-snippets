@@ -29,7 +29,9 @@ import java.util.Random;
 import hu.bme.mit.sette.common.annotations.SetteRequiredStatementCoverage;
 import hu.bme.mit.sette.common.annotations.SetteSnippetContainer;
 
-@SetteSnippetContainer(category = "Env4", goal = "Check support for system")
+// fork is needed because System.properties and System.env is affected
+@SetteSnippetContainer(category = "Env4", goal = "Check support for system",
+        forkDuringEvaluation = true)
 public final class Env4_System {
     private Env4_System() {
         throw new UnsupportedOperationException("Static class");
