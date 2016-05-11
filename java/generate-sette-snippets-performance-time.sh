@@ -12,7 +12,7 @@ error () {
     exit $1
 }
 
-FROM="sette-snippets"
+FROM="sette-snippets-core"
 TO="sette-snippets-performance-time"
 
 [ $# -eq 0 ] || error -1 "The script does not expect any parameter"

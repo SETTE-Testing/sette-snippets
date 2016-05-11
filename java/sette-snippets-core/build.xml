@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="sette-snippets" default="main">
+<project name="sette-snippets-core" default="main">
   <target name="main" depends="compile" />
 
   <target name="clean">
