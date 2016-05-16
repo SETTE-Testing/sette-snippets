@@ -79,7 +79,7 @@ public final class L2_Strings {
         }
     }
 
-    @SetteRequiredStatementCoverage(value = 83)
+    @SetteRequiredStatementCoverage(value = 92)
     public static int addWithCondition(String a, String b) {
         if (a == null && b == null) {
             return 0;
