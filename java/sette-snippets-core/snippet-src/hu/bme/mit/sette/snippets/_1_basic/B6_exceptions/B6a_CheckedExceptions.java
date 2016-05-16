@@ -119,9 +119,9 @@ public final class B6a_CheckedExceptions {
         } catch (Exception ex) {
             throw new MyException();
         } finally {
-            // note: return statements in the finally block is not advised
+            // note: return statements in the finally block are discouraged
             // - it overwrites the original return value
-            // - it absorbs the thrown exception
+            // - it absorbs the thrown exception and the catch clause is still covered
             if (z > 0) {
                 return -1;
             } else if (z < 0) {

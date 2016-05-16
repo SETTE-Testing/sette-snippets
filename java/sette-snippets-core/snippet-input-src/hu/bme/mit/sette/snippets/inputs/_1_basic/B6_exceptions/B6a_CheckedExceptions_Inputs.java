@@ -85,15 +85,14 @@ public final class B6a_CheckedExceptions_Inputs {
     public static SnippetInputContainer tryCatchFinally() {
         SnippetInputContainer inputs = new SnippetInputContainer(3);
 
-        inputs.addByParameters(1, 1, 0);
-        inputs.addByParameters(1, 1, 1); // overwrite return
-        inputs.addByParameters(1, 1, -1); // overwrite return
+        inputs.addByParameters(1, 1, 0); // does not overwrite return value
         inputs.addByParameters(-1, 1, 0);
         inputs.addByParameters(1, -1, 0);
         inputs.addByParameters(-1, -1, 0);
+        inputs.addByParameters(1, 1, 1); // overwrites return value
+        inputs.addByParameters(1, 1, -1); // overwrites return value
         inputs.addByExpectedAndParameters(MyException.class, 0, 0, 0);
-        inputs.addByParameters(0, 0, 1); // absorb
-        // exception
+        inputs.addByParameters(0, 0, 1); // absorb exception
 
         return inputs;
     }
