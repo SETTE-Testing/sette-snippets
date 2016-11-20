@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="sette-snippets-external" default="main">
-  <property name="jar.copyto" value="../sette-snippets/snippet-lib/${ant.project.name}.jar" />
+  <property name="jar.copyto" value="../sette-snippets-core/snippet-lib/${ant.project.name}.jar" />
 
   <target name="main" depends="jar" />
 

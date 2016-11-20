@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sette-snippets", "sette-snippets\sette-snippets.csproj", "{4E55936B-ED16-43C4-8313-8A5A6833FE68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sette-snippets-core", "sette-snippets-core\sette-snippets-core.csproj", "{4E55936B-ED16-43C4-8313-8A5A6833FE68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sette-snippets-external", "sette-snippets-external\sette-snippets-external.csproj", "{0F9012CE-CC64-4583-B71C-6A39196AED08}"
 EndProject
