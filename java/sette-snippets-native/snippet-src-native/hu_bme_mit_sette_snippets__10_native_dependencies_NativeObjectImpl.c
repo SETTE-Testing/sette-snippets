@@ -23,11 +23,11 @@
 #include "hu_bme_mit_sette_snippets__10_native_dependencies_NativeObject.h"
 
 JNIEXPORT void JNICALL Java_hu_bme_mit_sette_snippets__110_1native_dependencies_NativeObject_calculate
-		(JNIEnv * env, jobject this, jint x) {
+		(JNIEnv * env, jobject this, jint a) {
 	jfieldID field = (*env)->GetFieldID(env, (*env)->GetObjectClass(env, this), "x", "I");
 
 	jint newValue;
-	if (x == 4064256) { // 2016*2016
+	if (a == 4064256) { // 2016*2016
 		newValue = 2016;
 	} else {
 		newValue = 0;

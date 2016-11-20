@@ -13,7 +13,4 @@ public class SharedResource {
     public synchronized void setUser(Object user) {
         this.user = user;
     }
-    
-    
-
 }

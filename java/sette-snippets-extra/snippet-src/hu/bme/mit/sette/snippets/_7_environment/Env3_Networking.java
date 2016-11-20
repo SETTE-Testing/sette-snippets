@@ -83,7 +83,7 @@ public final class Env3_Networking {
 
         Socket socket = null;
         try {
-            // just find a host:prot combination
+            // just find a host:port combination
             socket = new Socket(host, port);
             return 1;
         } catch (Exception ex) {

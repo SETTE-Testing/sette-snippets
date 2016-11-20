@@ -37,7 +37,7 @@ public final class T1_Threads {
     @SetteRequiredStatementCoverage(100)
     public static int canNameThread() {
         String tn = Thread.currentThread().getName();
-        if (tn.equals("custom thread name")) {
+        if ("custom thread name".equals(tn)) {
             return 1;
         } else {
             return 0;
@@ -67,7 +67,8 @@ public final class T1_Threads {
 
         while (t.isAlive()) {
             // for maxDepth 15-30 it usually works
-            if (20 <= Thread.activeCount() && Thread.activeCount() <= 50) {
+            int tc = Thread.activeCount();
+            if (20 <= tc && tc <= 50) {
                 return 1;
             }
         }
